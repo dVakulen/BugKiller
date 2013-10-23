@@ -9,10 +9,7 @@ BugKiller/*.user
 BugKiller/*.pidb
 BugKiller/*.userprefs
 
-BugKiller/Library/cache/*
-BugKiller/Library/metadata/*
-BugKiller/Library/previews/*
-BugKiller/Library/ScriptAssemblies/*
+BugKiller/Library/*
 
 BugKiller/AnnotationManager
 BugKiller/assetDatabase3
