@@ -19,11 +19,11 @@ public class CharacterControlScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         chController = GetComponent<CharacterController>();
-        wasRightDirection = Input.mousePosition.x > transform.position.x ? true : false;
-        if (!wasRightDirection)
-        {
-            TurnAround();
-        }
+        //wasRightDirection = Input.mousePosition.x > transform.position.x ? true : false;
+        //if (!wasRightDirection)
+        //{
+        //    TurnAround();
+        //}
     }
 
     void FixedUpdate()
@@ -71,7 +71,14 @@ public class CharacterControlScript : MonoBehaviour
     {
         Debug.Log(string.Format("wasRightDirection {0}", wasRightDirection));
 
-        transform.Rotate(new Vector3(0, 1, 0), 180);
+        if (wasRightDirection)
+        {
+            transform.LookAt(new Vector3(10000, 0, 0));
+        }
+        else
+        {
+            transform.LookAt(new Vector3(-10000, 0, 0));
+        }
         anim.SetBool("WasRightDirection", wasRightDirection);
     }
 }
