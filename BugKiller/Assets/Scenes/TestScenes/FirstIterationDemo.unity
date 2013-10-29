@@ -2163,19 +2163,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25977aa2ccffbcf4f878c840ea784071, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.0306133125
+      value: .0338728838
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25977aa2ccffbcf4f878c840ea784071, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .530655444
+      value: .712484062
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25977aa2ccffbcf4f878c840ea784071, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .117963485
+      value: .0201433599
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 25977aa2ccffbcf4f878c840ea784071, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .838780224
+      value: .700580776
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25977aa2ccffbcf4f878c840ea784071, type: 2}
@@ -2267,7 +2267,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 25977aa2ccffbcf4f878c840ea784071, type: 2}
   m_PrefabInternal: {fileID: 966064631}
   m_GameObject: {fileID: 994060306}
-  m_LocalRotation: {x: -.0306133125, y: .530655444, z: .117963485, w: .838780224}
+  m_LocalRotation: {x: .0338728838, y: .712484062, z: .0201433599, w: .700580776}
   m_LocalPosition: {x: -12.3150396, y: 5.12779284, z: -7.86379385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3039,8 +3039,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334665365}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 1, z: 7.14420891}
+  m_LocalRotation: {x: 5.88743898e-09, y: .990888, z: -.134688959, w: -4.33130793e-08}
+  m_LocalPosition: {x: 0, y: 3.18523407, z: 7.14420891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3055,8 +3055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd23f55fba407244846d4a4ffa62282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 100096, guid: 4f8527aa7171dc443905f1a14a96d852, type: 3}
-  speed: 1.5
+  Speed: 1.5
 --- !u!114 &1334665372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3067,6 +3066,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e9a31713f3ed2647b927721341f186d, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
