@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
     void FixedUpdate()
     {
         SmoothPositionChanging();
-        //SmoothLookAt();
+        SmoothLookAt();
     }
 
     /// <summary>
