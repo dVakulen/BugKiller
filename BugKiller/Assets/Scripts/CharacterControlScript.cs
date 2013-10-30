@@ -5,9 +5,9 @@ public class CharacterControlScript : MonoBehaviour
     public float AnimSpeed = 1.5f;
     public float VelocityModifier = 1;
     public float JumpHeight = 5;
-
+	//public var pImpulse = 300;
     Animator anim;
-
+	
     /// <summary>
     /// true if charachter mouse is located in right area of the sreen
     /// </summary>
@@ -25,7 +25,7 @@ public class CharacterControlScript : MonoBehaviour
         //    TurnAround();
         //}
     }
-
+	/*
     void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
@@ -41,16 +41,20 @@ public class CharacterControlScript : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            chController.Move(new Vector3(0, JumpHeight, 0));
+			Vector3 g = new Vector3(0, JumpHeight, 0);
+		//	chController.velocity = (new Vector3(0, JumpHeight, 0));
+			//chController.velocity.y= AnimSpeed*5;
+		//	chController.SimpleMove(new Vector3(0, JumpHeight*10, 0));
+        // chController.Move(new Vector3(0, JumpHeight, 0));
         }
-
+		 //chController.Move(new Vector3(0, -JumpHeight/2, 0));
         anim.SetFloat("Speed", -h);
         anim.speed = AnimSpeed;
         //Debug.Log(string.Format("Speed = {0}", h));
 
         chController.Move(new Vector3(-h * VelocityModifier, 0, 0));
     }
-
+	*/
     void LateUpdate()
     {
         Vector3 mousePosition = Input.mousePosition;
@@ -66,7 +70,7 @@ public class CharacterControlScript : MonoBehaviour
             wasRightDirection = true;
         }
     }
-
+	
     void TurnAround()
     {
         Debug.Log(string.Format("wasRightDirection {0}", wasRightDirection));
