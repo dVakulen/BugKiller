@@ -11,12 +11,13 @@ public class ShootingScript : MonoBehaviour {
 	public float damage = 50f;
 
 	public GameObject BulletObject;	
+	public GameObject MuzzleFlash;
 	
 	public Vector3 AdditionalVector;
 	public Quaternion AdditionalRotation;
 	// Use this for initialization
 	void Start () {
-	
+		MuzzleFlash.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -26,8 +27,13 @@ public class ShootingScript : MonoBehaviour {
 		if(Input.GetMouseButton(0) && coolDownRemaining<=0)
 		{
 			Debug.Log("Shoot!");
+			MuzzleFlash.SetActive(true);
 			Instantiate(BulletObject, this.transform.position+AdditionalVector, this.transform.rotation*AdditionalRotation);
 			coolDownRemaining = coolDown;	
+		}
+		else
+		{
+			MuzzleFlash.SetActive(false);
 		}
 	}
 }
