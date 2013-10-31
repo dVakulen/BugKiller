@@ -7,6 +7,7 @@ public class BulletScript : MonoBehaviour {
 	
 	public GameObject Effect;
 	// Use this for initialization
+    //asdasdasdasd
 	void Start () {
 	
 	}
