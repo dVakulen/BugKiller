@@ -5,16 +5,24 @@ public class BulletScript : MonoBehaviour {
 	
 	public float speed = 3f;
 	
+	public float MaxDistance = 10000;
+	public float LifeTime = 10;
+	float spawnTime;
+	
 	public GameObject Effect;
 	// Use this for initialization
-    //asdasdasdasd
 	void Start () {
-	
+		spawnTime = Time.deltaTime;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+		MaxDistance-=speed;
+		if(Time.time>spawnTime+LifeTime || MaxDistance<=0)
+		{
+			Collisioning();
+		}
 	}
 	
 	void OnCollisionEnter(Collision collision)
@@ -31,10 +39,6 @@ public class BulletScript : MonoBehaviour {
 	
 	void Collisioning()
 	{		
-		if(Effect!=null)
-		{
-			Instantiate(Effect,transform.position,Quaternion.identity);	
-		}		
 		Destroy(this.gameObject);
 	}
 }

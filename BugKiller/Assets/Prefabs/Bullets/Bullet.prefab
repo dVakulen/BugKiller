@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 
   speed: 6
   Effect: {fileID: 0}
 --- !u!114 &11400002
@@ -126,7 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e967b546acbb164c841c69008a2d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 75
+  MaxDistance: 10000
+  LifeTime: 10
   Effect: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
