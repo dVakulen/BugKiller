@@ -1,39 +1,42 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class ShootingScript : MonoBehaviour {
-	
-	public float range = 100f;
-	
-	public float coolDown = 1f;
-	float coolDownRemaining = 0;
-	
-	public float damage = 50f;
+public class ShootingScript : MonoBehaviour
+{
 
-	public GameObject BulletObject;	
-	public GameObject MuzzleFlash;
-	
-	public Vector3 AdditionalVector;
-	public Quaternion AdditionalRotation;
-	// Use this for initialization
-	void Start () {
-		MuzzleFlash.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		coolDownRemaining -=Time.deltaTime;
-		
-		if(Input.GetMouseButton(0) && coolDownRemaining<=0)
-		{
-			Debug.Log("Shoot!");
-			MuzzleFlash.SetActive(true);
-			Instantiate(BulletObject, this.transform.position+AdditionalVector, this.transform.rotation*AdditionalRotation);
-			coolDownRemaining = coolDown;	
-		}
-		else
-		{
-			MuzzleFlash.SetActive(false);
-		}
-	}
+    public float range = 100f;
+    public float coolDown = 1f;
+    public float damage = 50f;
+    public GameObject BulletObject;
+    public GameObject MuzzleFlash;
+    public Vector3 AdditionalVector;
+    public Quaternion AdditionalRotation;
+
+    float coolDownRemaining = 0;
+    Animator anim;
+
+    void Start()
+    {
+        MuzzleFlash.SetActive(false);
+        anim = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        coolDownRemaining -= Time.deltaTime;
+
+        if (Input.GetMouseButton(0) && coolDownRemaining <= 0)
+        {
+            Debug.Log("Set Shoot of animator to true");
+
+            anim.SetBool("Shoot", true);
+            MuzzleFlash.SetActive(true);
+            Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);
+            coolDownRemaining = coolDown;
+        }
+        else
+        {
+            MuzzleFlash.SetActive(false);
+            anim.SetBool("Shoot", false);
+        }
+    }
 }

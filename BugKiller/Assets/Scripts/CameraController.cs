@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour
     /// <summary>
     /// Represent speed of changes.
     /// </summary>
-    public float Speed = 1.5f;
+    public float Speed = 5f;
 
     /// <summary>
     /// Player's transform object.

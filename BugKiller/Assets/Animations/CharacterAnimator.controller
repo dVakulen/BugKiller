@@ -108,9 +108,9 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: WasRightDirection
+    m_ConditionEvent: Shoot
     m_EventTreshold: 0
-    m_ExitTime: .8828125
+    m_ExitTime: .5
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -273,7 +273,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: cc3bcb73376f214499cc21b5ee65614f, type: 3}
+  - {fileID: 7400006, guid: 1049ffbf027750b43b1f88f53464c1f0, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 240, y: 264, z: 0}
   m_IKOnFeet: 0
@@ -288,9 +288,9 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 0}
+  - {fileID: 7400002, guid: 1049ffbf027750b43b1f88f53464c1f0, type: 3}
   m_ParentStateMachine: {fileID: 110738574}
-  m_Position: {x: 142, y: 134, z: 0}
+  m_Position: {x: 144, y: 132, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -303,7 +303,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: bb8e7392fda8804429d0edacb1b3e7b7, type: 3}
+  - {fileID: 7400002, guid: cf3b15822d060994c94cda80879e3e10, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 240, y: 132, z: 0}
   m_IKOnFeet: 0
@@ -314,11 +314,11 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AimStraight
+  m_Name: Shooting
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 645d178e544db4645abe74b51f7cb32b, type: 3}
+  - {fileID: 7400000, guid: 1049ffbf027750b43b1f88f53464c1f0, type: 3}
   m_ParentStateMachine: {fileID: 110738574}
   m_Position: {x: 144, y: 24, z: 0}
   m_IKOnFeet: 0

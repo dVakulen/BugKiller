@@ -4,7 +4,6 @@
 [RequireComponent(typeof(CapsuleCollider))]
 public class CharacterMovingScript : MonoBehaviour
 {
-    public float animSpeed = 1.5f;
 
     public float speed = 10.0f;
     public float gravity = 10.0f;
@@ -13,12 +12,14 @@ public class CharacterMovingScript : MonoBehaviour
     public float jumpHeight = 2.0f;
 
     bool grounded = false;
+    Animator anim;
 
     void Awake()
     {
         Debug.Log("CharacterMovingScript");
         rigidbody.freezeRotation = true;
         rigidbody.useGravity = false;
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -29,6 +30,7 @@ public class CharacterMovingScript : MonoBehaviour
             Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
             //targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
+            anim.SetFloat("Speed", targetVelocity.x);
 
             // Apply a force that attempts to reach our target velocity
             Vector3 velocity = rigidbody.velocity;
@@ -36,7 +38,6 @@ public class CharacterMovingScript : MonoBehaviour
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
             velocityChange.y = 0;
-            Debug.Log(velocityChange);
             rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 
             // Jump
@@ -44,6 +45,10 @@ public class CharacterMovingScript : MonoBehaviour
             {
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
             }
+        }
+        else
+        {
+            anim.SetFloat("Speed", 0);
         }
 
         // We apply gravity manually for more tuning control
