@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Scripts.Model
-{
     /// <summary>
     /// Base class for all entities, which have live and can be killed
     /// </summary>
@@ -72,4 +70,4 @@ namespace Assets.Scripts.Model
             }
         }
     }
-}
+
