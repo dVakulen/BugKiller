@@ -10,7 +10,7 @@ namespace Assets.Scripts.Model
     /// </summary>
     public class Enemy : LivingEntity
     {
-        public Enemy() : base(0.5f, 50f)
+        public Enemy() : base(50f, 1.5f)
         {
             
         }
