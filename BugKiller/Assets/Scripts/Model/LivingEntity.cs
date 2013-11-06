@@ -62,7 +62,10 @@ namespace Assets.Scripts.Model
                 health -= appliedDamage;
                 if (health <= 0)
                 {
-                    OnDying(this);
+                    if (OnDying != null)
+                    {
+                        OnDying(this);    
+                    }
                 }
                 return appliedDamage;
             }
