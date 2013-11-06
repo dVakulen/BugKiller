@@ -16,7 +16,7 @@ using System.Text;
         float health;
         float defenceModifier;
 
-        public LivingEntity(float defModifier = 1, float health = 100)
+        public LivingEntity(float health = 100, float defModifier = 1)
         {
             defenceModifier = defModifier;
             this.health = health;

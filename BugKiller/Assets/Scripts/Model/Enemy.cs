@@ -9,9 +9,12 @@ using System.Collections;
     /// This class represent enemy with 50hp and 0.5 deffence modifier.
     /// </summary>
     public class Enemy : LivingEntity
+
     {  
         
-        public Enemy() : base(0.5f, 50f)
+  
+        public Enemy() : base(50f, 1.5f)
+
         {
             
         }
