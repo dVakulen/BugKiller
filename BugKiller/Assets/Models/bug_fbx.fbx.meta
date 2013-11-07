@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: e7d482e6a456b30439fb85dec63d47a0
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: beatar1
+    100002: beatar2
+    100004: beatar3
+    100006: beatar4
+    100008: beatar5
+    100010: beatar6
+    100012: beatbase
+    100014: beateyes
+    100016: beatfem1
+    100018: beatfem2
+    100020: beathair
+    100022: beatibi1
+    100024: beatibi2
+    100026: beatibi3
+    100028: beatibi4
+    100030: beatwing
+    100032: //RootNode
+    100034: Dummy01
+    400000: beatar1
+    400002: beatar2
+    400004: beatar3
+    400006: beatar4
+    400008: beatar5
+    400010: beatar6
+    400012: beatbase
+    400014: beateyes
+    400016: beatfem1
+    400018: beatfem2
+    400020: beathair
+    400022: beatibi1
+    400024: beatibi2
+    400026: beatibi3
+    400028: beatibi4
+    400030: beatwing
+    400032: //RootNode
+    400034: Dummy01
+    2300000: beatar1
+    2300002: beatar2
+    2300004: beatar3
+    2300006: beatar4
+    2300008: beatar5
+    2300010: beatar6
+    2300012: beatbase
+    2300014: beateyes
+    2300016: beatfem1
+    2300018: beatfem2
+    2300020: beathair
+    2300022: beatibi1
+    2300024: beatibi2
+    2300026: beatibi3
+    2300028: beatibi4
+    2300030: beatwing
+    3300000: beatar1
+    3300002: beatar2
+    3300004: beatar3
+    3300006: beatar4
+    3300008: beatar5
+    3300010: beatar6
+    3300012: beatbase
+    3300014: beateyes
+    3300016: beatfem1
+    3300018: beatfem2
+    3300020: beathair
+    3300022: beatibi1
+    3300024: beatibi2
+    3300026: beatibi3
+    3300028: beatibi4
+    3300030: beatwing
+    4300000: beatbase
+    4300002: beathair
+    4300004: beatfem1
+    4300006: beatar5
+    4300008: beatfem2
+    4300010: beatar6
+    4300012: beateyes
+    4300014: beatibi2
+    4300016: beatar2
+    4300018: beatibi1
+    4300020: beatar1
+    4300022: beatibi3
+    4300024: beatar3
+    4300026: beatibi4
+    4300028: beatar4
+    4300030: beatwing
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
