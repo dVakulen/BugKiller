@@ -6,7 +6,7 @@ using System.Text;
     /// <summary>
     /// Base class for all entities, which have live and can be killed
     /// </summary>
-    public abstract class LivingEntity
+    public abstract class LivingEntity 
     {
         /// <summary>
         /// This event is invoked if entiry die.
