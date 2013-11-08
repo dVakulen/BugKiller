@@ -49,7 +49,7 @@ public class SeekSteer : MonoBehaviour
     // calculates a new heading
     protected void FixedUpdate()
     {
-        targetHeading = waypoints[targetwaypoint].position - xform.position;
+        //targetHeading = waypoints[targetwaypoint].position - xform.position;
 
         //currentHeading = Vector3.Lerp(currentHeading, targetHeading, damping * Time.deltaTime);
         currentHeading = waypoints[targetwaypoint].position;
