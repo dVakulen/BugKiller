@@ -44,6 +44,7 @@ public class CharacterMovingScript : MonoBehaviour
             if (canJump && Input.GetKeyDown(KeyCode.W))
             {
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+                
             }
         }
         else
@@ -51,15 +52,18 @@ public class CharacterMovingScript : MonoBehaviour
             anim.SetFloat("Speed", 0);
         }
 
+        grounded = false;
+
         // We apply gravity manually for more tuning control
         rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
-
-        grounded = false;
     }
 
-    void OnCollisionStay()
+    void OnCollisionStay(Collision collision)
     {
-        grounded = true;
+        if (collision.gameObject.tag != "Wall")
+        {
+            grounded = true;    
+        }
     }
 
     float CalculateJumpVerticalSpeed()
