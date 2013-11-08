@@ -1399,7 +1399,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!135 &341030837
 SphereCollider:
@@ -1582,6 +1582,74 @@ Transform:
   m_LocalScale: {x: 45.6861916, y: .146624863, z: 12.6389999}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &396166401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 396166402}
+  - 132: {fileID: 396166403}
+  - 114: {fileID: 396166404}
+  m_Layer: 0
+  m_Name: AlienBugLives
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396166402
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396166401}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -5.46565819, y: 2.94116974, z: 1.31562662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1611821027}
+--- !u!132 &396166403
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396166401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: test
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!114 &396166404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396166401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cfc6d61214dab41bd4724d0cced8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1611821027}
+  offset: {x: 0, y: 1, z: 0}
+  clampToScreen: 0
+  clampBorderSize: .0500000007
+  useMainCamera: 1
+  cameraToUse: {fileID: 0}
 --- !u!1 &400202827
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,6 +6253,7 @@ GameObject:
   - 54: {fileID: 1611821030}
   - 135: {fileID: 1611821031}
   - 114: {fileID: 1611821029}
+  - 23: {fileID: 1611821033}
   m_Layer: 0
   m_Name: Alien Bug
   m_TagString: Untagged
@@ -6213,6 +6282,7 @@ Transform:
   - {fileID: 1099777918}
   - {fileID: 1947222611}
   - {fileID: 1338872964}
+  - {fileID: 396166402}
   m_Father: {fileID: 0}
 --- !u!95 &1611821028
 Animator:
@@ -6273,6 +6343,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 1.02999997, z: -.0199999996}
+--- !u!23 &1611821033
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1611821026}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
 --- !u!1 &1619065296
 GameObject:
   m_ObjectHideFlags: 0

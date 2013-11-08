@@ -17,6 +17,17 @@ public class EnemyController : MonoBehaviour
     private Enemy model;
     private Animator anim;
 
+    public EnemyController()
+    {
+        model = new Enemy();
+        model.OnDying += model_OnDying;
+    }
+
+    public Enemy GetEnemyModel()
+    {
+        return model;
+    }
+
     // Use this for initialization
     protected void Start()
     {
@@ -38,15 +49,12 @@ public class EnemyController : MonoBehaviour
             useRigidbody = false;
         }
 
-        model = new Enemy();
-        model.OnDying += model_OnDying;
-
-        anim = GetComponent<Animator>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void model_OnDying(object obj)
     {
-        Destroy(this, 2);
+        Destroy(this.gameObject, 2);
         anim.enabled = false;
     }
 
@@ -100,9 +108,9 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision) 
+    void OnTriggerEnter(Collider collision) 
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "bullet")
         {
             model.Hit(5);
         }

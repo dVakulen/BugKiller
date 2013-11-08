@@ -29,6 +29,7 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collider.gameObject);
         Debug.Log("CollilionEnter!");
         Collisioning();
     }
