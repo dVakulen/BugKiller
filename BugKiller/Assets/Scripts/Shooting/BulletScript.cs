@@ -41,6 +41,6 @@ public class BulletScript : MonoBehaviour
 
     void Collisioning()
     {
-        Destroy(this.gameObject, 5);
+        Destroy(this.gameObject);
     }
 }
