@@ -17,8 +17,7 @@ public class EnemyAI : MonoBehaviour
     private Transform player;
     private Transform wp1;
     private Transform wp;// Reference to the player's transform.
-    private PlayerHealth playerHealth;					// Reference to the PlayerHealth script.
-    //	private DoneLastPlayerSighting lastPlayerSighting;		// Reference to the last global sighting of the player.
+        //	private DoneLastPlayerSighting lastPlayerSighting;		// Reference to the last global sighting of the player.
     private float chaseTimer;								// A timer for the chaseWaitTime.
     private float patrolTimer;								// A timer for the patrolWaitTime.
     private int wayPointIndex;								// A counter for the way point array.
@@ -38,7 +37,6 @@ public class EnemyAI : MonoBehaviour
         Debug.Log(this.name);
         towp = false;
         isdead = false;
-        playerHealth = player.GetComponent<PlayerHealth>();
         startpos = rigidbody.position;
        
         isdead = false;

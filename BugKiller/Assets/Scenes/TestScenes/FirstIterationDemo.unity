@@ -4473,7 +4473,6 @@ GameObject:
   - 124: {fileID: 1334665367}
   - 81: {fileID: 1334665366}
   - 114: {fileID: 1334665371}
-  - 114: {fileID: 1334665372}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4553,59 +4552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1.5
---- !u!114 &1334665372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1334665365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb7db2c81bacc364aab8c451acf3cacf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1335849431
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,9 +6182,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1611821027}
   - 95: {fileID: 1611821028}
-  - 114: {fileID: 1611821029}
   - 54: {fileID: 1611821030}
   - 135: {fileID: 1611821031}
+  - 114: {fileID: 1611821029}
   m_Layer: 0
   m_Name: Alien Bug
   m_TagString: Untagged
@@ -6289,13 +6235,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611821026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 809b88a51a9578e42a89c9531971aacd, type: 3}
+  m_Script: {fileID: 11500000, guid: 32cd14d51333dc44391b59c07afa3418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 1357301393}
   - {fileID: 1321522850}
-  waypointRadius: 1.5
+  waypointRadius: 2
   damping: .100000001
   loop: 1
   speed: 2
