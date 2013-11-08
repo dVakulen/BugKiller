@@ -4605,6 +4605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1335849431
 GameObject:
   m_ObjectHideFlags: 0
@@ -6325,7 +6326,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: 0, y: 1.02999997, z: -.610000014}
+  m_Center: {x: 0, y: 1.02999997, z: -.0199999996}
 --- !u!1 &1619065296
 GameObject:
   m_ObjectHideFlags: 0
