@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
 
     void model_OnDying(object obj)
     {
-        Destroy(this.gameObject, 2);
+        Destroy(this.gameObject);
         anim.enabled = false;
     }
 
