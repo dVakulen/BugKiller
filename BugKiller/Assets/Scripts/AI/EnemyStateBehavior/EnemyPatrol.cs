@@ -6,14 +6,15 @@ using UnityEngine;
 
 namespace Assets.Scripts.AI.EnemyStateBehavior
 {
-    class EnemyPatrol : EnemyState
+   public class EnemyPatrol : EnemyState
     {
         float waypointRadius;
         Transform firstPoint;
         Transform secondPoint;
         Transform currentGoal;
         Vector3 currentHeading;
-        
+          	 Transform player;
+      
         public EnemyPatrol(
             float waypointRadius, 
             Transform firstPoint,  
@@ -24,12 +25,23 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             this.firstPoint = firstPoint;
             this.secondPoint = secondPoint;
             this.currentGoal = secondPoint;
+			
+			   player = GameObject.Find("Character").transform;
+	
         }
 
         public override void Action(EnemyActivity context) 
         {
             //here should be transition check...
-
+			
+			if (Vector3.Distance(context.ThisEnemy.position, player.position) <= 4 ) //hardcoded ftw
+            {
+		      context.ChangeState(context.Getchasing());
+              return;
+            }
+			
+			
+			
             //updating direction
             UpdateDirection(context);
 

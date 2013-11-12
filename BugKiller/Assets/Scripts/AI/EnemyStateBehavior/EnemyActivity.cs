@@ -12,14 +12,27 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Transform thisEnemy;
         Rigidbody rigidBody;
         float speed;
+		
+ EnemyChasing enemychasing;
+ EnemyPatrol enemypatrol;
+	 EnemyAttacking enemyattack;
 
-        public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, EnemyState state)
+		
+		public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, EnemyState state, EnemyPatrol patrol,
+			EnemyChasing chase,EnemyAttacking attack )
         {
             this.thisEnemy = thisEnemy;
             this.rigidBody = rigidBody;
             this.speed = speed;
 
             currentState = state;
+			
+			
+				enemypatrol =  patrol;
+		//enemySight = GetComponent<EnemySight>();
+		enemychasing = chase;
+		enemyattack = attack;
+	
         }
 
         public Transform ThisEnemy { get { return thisEnemy; } }
@@ -35,5 +48,21 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         {
             currentState = newState;
         }
+		public EnemyState GetState()
+        {
+          return  currentState ;
+        }
+		public  EnemyState Getchasing()
+	{
+		return enemychasing;
+	}
+	public  EnemyState Getattacking()
+	{
+		return enemyattack;
+	}
+		public  EnemyState Getpatrol()
+	{
+		return enemypatrol;
+	}
     }
 }

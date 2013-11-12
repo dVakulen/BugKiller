@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     public float damping = 0.1f;
     public float speed = 2.0f;
     public bool faceHeading = true;
-
+public float chasingRange = 5f;
     private Vector3 currentHeading;
     
     private int targetwaypoint;
@@ -20,7 +20,8 @@ public class EnemyController : MonoBehaviour
     private Enemy model;
     private Animator anim;
     private EnemyActivity enemyActivity;
-
+	  private EnemySight enemySight;
+	
     public EnemyController()
     {
         model = new Enemy();
@@ -34,8 +35,8 @@ public class EnemyController : MonoBehaviour
 
     // Use this for initialization
     protected void Start()
-    {
-        if (FirstPoint == null || SecondPoint == null)
+    {   
+	   if (FirstPoint == null || SecondPoint == null)
         {
             Debug.Log("You have to add two points (two transform object)");
         }
@@ -44,8 +45,13 @@ public class EnemyController : MonoBehaviour
             transform,
             rigidbody,
             speed,
-            new EnemyPatrol(waypointRadius, FirstPoint, SecondPoint)
+			 new EnemyPatrol(waypointRadius, FirstPoint, SecondPoint),
+			 new EnemyPatrol(waypointRadius, FirstPoint, SecondPoint),
+			new EnemyChasing(chasingRange,this.transform.position,GameObject.Find("Character").transform),
+			new EnemyAttacking(GameObject.Find("Character").transform)
+	
             );
+		
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -58,6 +64,8 @@ public class EnemyController : MonoBehaviour
     
     protected void Update()
     {
+	
+		
         enemyActivity.Action();
     }
 
@@ -85,4 +93,5 @@ public class EnemyController : MonoBehaviour
             model.Hit(5);
         }
     }
+	
 }
