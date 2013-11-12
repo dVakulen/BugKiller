@@ -6308,12 +6308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cd14d51333dc44391b59c07afa3418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 1357301393}
-  - {fileID: 1321522850}
+  FirstPoint: {fileID: 1357301393}
+  SecondPoint: {fileID: 1321522850}
   waypointRadius: 2
   damping: .100000001
-  loop: 1
   speed: 2
   faceHeading: 1
 --- !u!54 &1611821030
