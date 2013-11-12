@@ -29,7 +29,6 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 			
 			
 				enemypatrol =  patrol;
-		//enemySight = GetComponent<EnemySight>();
 		enemychasing = chase;
 		enemyattack = attack;
 	

@@ -20,7 +20,6 @@ public float chasingRange = 5f;
     private Enemy model;
     private Animator anim;
     private EnemyActivity enemyActivity;
-	  private EnemySight enemySight;
 	
     public EnemyController()
     {

@@ -24,17 +24,12 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 			start=Start;
 			player= Player;
 			timecurve = 150;
-		//	currentHeading = player.transform.position;
-			//currentGoal = player.transform;
-        }
+	     }
 		
 	
 	
         public override void Action(EnemyActivity context) 
         {
-			  //	Debug.LogError(GameObject.Find("Character").transform.position.x);
-	//	Debug.LogError(player.transform.position.x);
-            //here should be transition check...
 //timecurve--;
             //updating direction
 			if(Vector3.Distance(player.transform.position ,context.ThisEnemy.position)>4) // hardcoded twice. Why?
@@ -54,10 +49,9 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             context.Rigidbody.velocity = currentHeading.normalized * context.Speed* multiplier;
             context.ThisEnemy.LookAt(context.ThisEnemy.position + currentHeading);
 
-            //check if we have reached destination
-           /* if (Vector3.Distance(context.ThisEnemy.position, start.position) >= range)
+         /*  if (Vector3.Distance(context.ThisEnemy.position, start.position) >= range)
             {
-				currentGoal = start;
+				currentGoal.position = start;
 				timecurve = 150;
               
             }

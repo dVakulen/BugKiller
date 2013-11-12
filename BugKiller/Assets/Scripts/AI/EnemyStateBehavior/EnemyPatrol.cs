@@ -32,8 +32,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 
         public override void Action(EnemyActivity context) 
         {
-            //here should be transition check...
-			
+     		
 			if (Vector3.Distance(context.ThisEnemy.position, player.position) <= 4 ) //hardcoded ftw
             {
 		      context.ChangeState(context.Getchasing());

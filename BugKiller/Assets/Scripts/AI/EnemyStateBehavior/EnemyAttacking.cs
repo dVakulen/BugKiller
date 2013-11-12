@@ -17,12 +17,8 @@ public class EnemyAttacking : EnemyState
 	{
 		//anim = GetComponent<Animator>();
        
-	 //  col = GetComponent<SphereCollider>(); 
-		//col.isTrigger= true;
-		//col.enabled = false;
-        player = GameObject.Find("Character").transform;
-		//playerHealth = player.gameObject.GetComponent<PlayerHealth>();
-        attack = 25;
+	    player = GameObject.Find("Character").transform;
+	   attack = 25;
        
      
 
@@ -36,8 +32,7 @@ public class EnemyAttacking : EnemyState
 	  public override void Action(EnemyActivity context) 
         {
 			 attack -= attackspeed;
-	   //  Vector3 sightingDeltaPos = player.transform.position - transform.position;
-            if(Vector3.Distance(player.position ,context.ThisEnemy.position)>attackRange) //sightingDeltaPos.x<attackRange)
+	       if(Vector3.Distance(player.position ,context.ThisEnemy.position)>attackRange) 
             {
              context.ChangeState(context.Getchasing());
 			return;
@@ -46,8 +41,7 @@ public class EnemyAttacking : EnemyState
 			{ 
 				if (attack < 0)
                 {
-                    // ... shoot
-                    Attack();
+                     Attack();
                     attack = 125;
                 }
 			}
@@ -88,7 +82,6 @@ public class EnemyAttacking : EnemyState
 	*/
 	void Attack ()
 	{
-//		attacking = true;
 		
 	
 	

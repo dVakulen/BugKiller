@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
 		private float timer;							
 	private bool playerDead;							
 	
-	
 	void Awake ()
 	{
 		// Setting up the references.
@@ -75,6 +74,40 @@ public class PlayerHealth : MonoBehaviour
 	}
 	
 	
+/*	 void OnGUI()
+    {
+        if(!isdead)
+        { 
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+
+        //Íàõîäèòñÿ ëè îáúåêò ïåðåä êàìåðîé
+        Vector3 cameraRelative = Camera.main.transform.InverseTransformPoint(transform.position);
+        if (cameraRelative.z > 0)
+        {
+            if (!initialized)
+            {
+                playername = GameObject.Instantiate(Resources.Load("PlayerText")) as GameObject;
+                GUIText name = playername.GetComponent<GUIText>();
+
+                string hp = this.enemy.Health.ToString();
+                    name.text = hp;
+
+                initialized = true;
+            }
+            else
+            {
+                GUIText name = playername.GetComponent<GUIText>();
+
+                string hp = this.enemy.Health.ToString();
+                name.text = hp;
+
+            }
+
+            playername.transform.position = Camera.mainCamera.WorldToViewportPoint(transform.position) + new Vector3(0f, 0.15f, 0f);
+
+        }
+        }
+    } */
 	public void TakeDamage (float amount)
     {
 		// Decrement the player's health by amount.
