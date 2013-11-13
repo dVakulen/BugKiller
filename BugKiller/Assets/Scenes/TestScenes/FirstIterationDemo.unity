@@ -5678,11 +5678,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstPoint: {fileID: 118022308}
   SecondPoint: {fileID: 467275613}
-  waypointRadius: .5
-  damping: .100000001
-  speed: 2
-  faceHeading: 1
-  chasingRange: 5
+  WaypointRadius: 2
+  Damping: .100000001
+  Speed: 2
+  AttentionDistance: 5
 --- !u!1 &1609744144
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,14 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Rigidbody rigidBody;
         float speed;
         EnemyPatrol enemypatrol;
+        float attentionDistance;
 
-        public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, EnemyState state)
+        public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, float attDist, EnemyState state)
         {
             this.thisEnemy = thisEnemy;
             this.rigidBody = rigidBody;
             this.speed = speed;
+            this.attentionDistance = attDist;
 
             currentState = state;
         }
@@ -40,6 +42,14 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             get
             {
                 return speed;
+            }
+        }
+
+        public float AttentionDistance
+        {
+            get
+            {
+                return attentionDistance;
             }
         }
 

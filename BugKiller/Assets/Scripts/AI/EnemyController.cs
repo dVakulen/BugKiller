@@ -5,14 +5,12 @@ public class EnemyController : MonoBehaviour
 {
     public Transform FirstPoint;
     public Transform SecondPoint;
+    public float WaypointRadius = 2f;
+    public float Damping = 0.1f;
+    public float Speed = 2.0f;
+    public float AttentionDistance = 5;
 
-    public float waypointRadius = 2f;
-    public float damping = 0.1f;
-    public float speed = 2.0f;
-    public bool faceHeading = true;
-    public float chasingRange = 5f;
     private Vector3 currentHeading;
-
     private int targetwaypoint;
     private Transform xform;
     private bool useRigidbody;
@@ -49,8 +47,8 @@ public class EnemyController : MonoBehaviour
             Debug.Log("You have to add two points (two transform object)");
         }
 
-        enemyActivity = new EnemyActivity(transform, rigidbody, speed,
-            new EnemyPatrol(waypointRadius, FirstPoint, SecondPoint)
+        enemyActivity = new EnemyActivity(transform, rigidbody, Speed, AttentionDistance,
+            new EnemyPatrol(WaypointRadius, FirstPoint, SecondPoint)
             );
 
         anim = gameObject.GetComponent<Animator>();
