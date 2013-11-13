@@ -25,7 +25,12 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             player = GameObject.Find("Character").transform;
         }
 
-        public override void Action(EnemyActivity context)
+        void UpdateDirection(EnemyActivity context)
+        {
+            currentHeading = new Vector3(currentGoal.position.x - context.ThisEnemy.position.x, 0, 0);
+        }
+
+        protected override void Work(EnemyActivity context)
         {
             //updating direction
             UpdateDirection(context);
@@ -40,19 +45,17 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
                 if (currentGoal == firstPoint)
                 {
                     currentGoal = secondPoint;
-                    Debug.Log("Target is second point");
                 }
                 else
                 {
                     currentGoal = firstPoint;
-                    Debug.Log("Target is first point");
                 }
             }
         }
 
-        void UpdateDirection(EnemyActivity context)
+        protected override void CheckTransition(EnemyActivity context)
         {
-            currentHeading = new Vector3(currentGoal.position.x - context.ThisEnemy.position.x, 0, 0);
+
         }
     }
 }
