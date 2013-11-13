@@ -4,13 +4,12 @@
 SceneSettings:
   m_ObjectHideFlags: 0
   m_PVSData: 
-  m_QueryMode: 1
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
-    viewCellSize: 1
-    bakeMode: 2
-    memoryUsage: 10485760
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
   m_Fog: 0
@@ -23,6 +22,7 @@ RenderSettings:
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 0}
   m_ObjectHideFlags: 0
@@ -139,6 +139,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &65724839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -367,6 +370,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &138664340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -541,6 +547,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -618,6 +627,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.598112762, y: -.0985943228, z: .14113687}
@@ -727,11 +737,9 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!95 &195749108
 Animator:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 75f03da83a22ee743a5a1aba20b5a6ba,
     type: 2}
@@ -743,6 +751,7 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!23 &195749109
 Renderer:
   m_ObjectHideFlags: 0
@@ -763,6 +772,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &195749110
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -873,6 +885,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &215765266
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1224,6 +1239,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &386912740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1852,6 +1870,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &621098447
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1959,6 +1980,7 @@ Transform:
   m_Father: {fileID: 0}
 --- !u!95 &674488091
 Animator:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: acc998dd4315a97409de16fe199cd642,
     type: 3}
@@ -1970,6 +1992,7 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 0
   m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &674488092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,6 +2123,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2177,6 +2203,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.0193782002, y: 5.96046448e-08, z: .136763453}
@@ -2254,9 +2281,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!23 &750663065
 Renderer:
   m_ObjectHideFlags: 0
@@ -2276,6 +2300,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &750663066
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2421,6 +2448,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &768823064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2872,6 +2902,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2949,6 +2982,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.142342612, y: .000253073871, z: -.023872301}
@@ -3044,6 +3078,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &923222373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3260,6 +3297,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &994060309
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3421,6 +3461,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -3498,6 +3541,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: .201158136, y: 2.98023224e-08, z: -.191115916}
@@ -3885,6 +3929,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1307465795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3977,6 +4024,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &1321522849
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4091,6 +4141,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
+  m_OcclusionCulling: 1
 --- !u!4 &1334665370
 Transform:
   m_ObjectHideFlags: 0
@@ -4215,6 +4266,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -4292,6 +4346,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.34547776, y: -.000384479761, z: -.461253047}
@@ -4343,6 +4398,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -4420,6 +4478,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.598112822, y: .0985944271, z: .14113678}
@@ -4498,6 +4557,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -4575,6 +4637,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.518834352, y: .000408262014, z: .0576480925}
@@ -4706,6 +4769,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -4783,6 +4849,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: .322912663, y: 2.98023224e-08, z: .417012483}
@@ -4958,6 +5025,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -5026,6 +5096,7 @@ SkinnedMeshRenderer:
   - {fileID: 751994117}
   - {fileID: 628613734}
   - {fileID: 171939870}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 38191304}
   m_AABB:
     m_Center: {x: .0208054185, y: .10558331, z: .0565402806}
@@ -5256,6 +5327,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -5333,6 +5407,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: .544102848, y: -2.08616257e-07, z: .0230342001}
@@ -5615,6 +5690,7 @@ Transform:
   m_Father: {fileID: 0}
 --- !u!95 &1611821028
 Animator:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 8024a107623a99b4e826dc293426f1ad,
     type: 3}
@@ -5626,6 +5702,7 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 0
   m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &1611821029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5690,6 +5767,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!114 &1611821034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5701,16 +5781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71eb0ca52891c3e498e646ab944cd365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1611821035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5721,16 +5791,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c0ab2d32db9c1048b7c597c462a3b3f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
 --- !u!1 &1619065296
 GameObject:
@@ -6534,6 +6594,9 @@ SkinnedMeshRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -6611,6 +6674,7 @@ SkinnedMeshRenderer:
   - {fileID: 197499849}
   - {fileID: 1060596783}
   - {fileID: 1072828782}
+  m_BlendShapeWeights: []
   m_RootBone: {fileID: 1499805006}
   m_AABB:
     m_Center: {x: -.396111667, y: 4.27961349e-05, z: -.370888591}
@@ -6974,6 +7038,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &2089488639
 BoxCollider:
   m_ObjectHideFlags: 0
