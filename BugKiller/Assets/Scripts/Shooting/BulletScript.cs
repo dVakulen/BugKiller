@@ -6,14 +6,14 @@ public class BulletScript : MonoBehaviour
     public float speed = 3f;
 
     public float MaxDistance = 10000;
-    public float LifeTime = 10;
+    public float LifeTime = 100;
     float spawnTime;
 
     public GameObject Effect;
     // Use this for initialization
     void Start()
     {
-        spawnTime = Time.deltaTime;
+        spawnTime = Time.time;
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour
     {
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
         MaxDistance -= speed;
-        if (Time.time > spawnTime + LifeTime || MaxDistance <= 0)
+        if (Time.time > (spawnTime + LifeTime) || MaxDistance <= 0)
         {
             Collisioning();
         }
@@ -42,6 +42,7 @@ public class BulletScript : MonoBehaviour
 
     void Collisioning()
     {
+		Debug.Log("Destroyed");
         Destroy(this.gameObject);
     }
 }
