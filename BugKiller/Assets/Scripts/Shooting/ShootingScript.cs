@@ -17,7 +17,7 @@ public class ShootingScript : MonoBehaviour
     void Start()
     {
         MuzzleFlash.SetActive(false);
-        anim = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Animator>();
+        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void Update()
@@ -26,8 +26,6 @@ public class ShootingScript : MonoBehaviour
 
         if (Input.GetMouseButton(0) && coolDownRemaining <= 0)
         {
-            Debug.Log("Set Shoot of animator to true");
-
             anim.SetBool("Shoot", true);
             MuzzleFlash.SetActive(true);
             Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);

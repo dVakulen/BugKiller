@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.AI.EnemyStateBehavior
 {
@@ -12,33 +8,42 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Transform thisEnemy;
         Rigidbody rigidBody;
         float speed;
-		
- EnemyChasing enemychasing;
- EnemyPatrol enemypatrol;
-	 EnemyAttacking enemyattack;
+        EnemyPatrol enemypatrol;
 
-		
-		public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, EnemyState state, EnemyPatrol patrol,
-			EnemyChasing chase,EnemyAttacking attack )
+        public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, EnemyState state)
         {
             this.thisEnemy = thisEnemy;
             this.rigidBody = rigidBody;
             this.speed = speed;
 
             currentState = state;
-			
-			
-				enemypatrol =  patrol;
-		enemychasing = chase;
-		enemyattack = attack;
-	
         }
 
-        public Transform ThisEnemy { get { return thisEnemy; } }
-        public Rigidbody Rigidbody { get { return rigidBody; } }
-        public float Speed { get { return speed; } }
+        public Transform ThisEnemy
+        {
+            get
+            {
+                return thisEnemy;
+            }
+        }
 
-        public void Action() 
+        public Rigidbody Rigidbody
+        {
+            get
+            {
+                return rigidBody;
+            }
+        }
+
+        public float Speed
+        {
+            get
+            {
+                return speed;
+            }
+        }
+
+        public void Action()
         {
             currentState.Action(this);
         }
@@ -47,21 +52,10 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         {
             currentState = newState;
         }
-		public EnemyState GetState()
+
+        public EnemyState GetState()
         {
-          return  currentState ;
+            return currentState;
         }
-		public  EnemyState Getchasing()
-	{
-		return enemychasing;
-	}
-	public  EnemyState Getattacking()
-	{
-		return enemyattack;
-	}
-		public  EnemyState Getpatrol()
-	{
-		return enemypatrol;
-	}
     }
 }

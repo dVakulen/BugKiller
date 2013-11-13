@@ -2,11 +2,10 @@
 
 public class BulletScript : MonoBehaviour
 {
-
     public float speed = 3f;
-
     public float MaxDistance = 10000;
     public float LifeTime = 100;
+
     float spawnTime;
 
     public GameObject Effect;
@@ -29,20 +28,16 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collider.gameObject);
-        Debug.Log("CollilionEnter!");
         Collisioning();
     }
 
     void OnTriggerEnter()
     {
-        Debug.Log("TriggerCollisionEnter!");
         Collisioning();
     }
 
     void Collisioning()
     {
-		Debug.Log("Destroyed");
         Destroy(this.gameObject);
     }
 }

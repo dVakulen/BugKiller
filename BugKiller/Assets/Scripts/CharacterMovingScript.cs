@@ -16,7 +16,6 @@ public class CharacterMovingScript : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("CharacterMovingScript");
         rigidbody.freezeRotation = true;
         rigidbody.useGravity = false;
         anim = GetComponent<Animator>();
@@ -30,25 +29,25 @@ public class CharacterMovingScript : MonoBehaviour
             Vector3 targetVelocity = new Vector3(-Input.GetAxis("Horizontal"), 0, 0);
             //targetVelocity = transform.TransformDirection(targetVelocity);
 
-			if (targetVelocity.x == 0) 
-			{
-				anim.SetBool("Run", false);
-			}
-			else
-			{
-				anim.SetBool("Run", true);
-				if (targetVelocity.x > 0) 
-				{
-					TurnRight();
-				}
-				else 
-				{
-					TurnLeft();
-				}
-			}
+            if (targetVelocity.x == 0)
+            {
+                anim.SetBool("Run", false);
+            }
+            else
+            {
+                anim.SetBool("Run", true);
+                if (targetVelocity.x > 0)
+                {
+                    TurnRight();
+                }
+                else
+                {
+                    TurnLeft();
+                }
+            }
 
-			targetVelocity *= speed;
-            
+            targetVelocity *= speed;
+
 
             // Apply a force that attempts to reach our target velocity
             Vector3 velocity = rigidbody.velocity;
@@ -66,8 +65,8 @@ public class CharacterMovingScript : MonoBehaviour
         }
         else
         {
-			//If we're in air we don't run.
-			anim.SetBool("Run", false);
+            //If we're in air we don't run.
+            anim.SetBool("Run", false);
         }
 
         grounded = false;
@@ -80,7 +79,7 @@ public class CharacterMovingScript : MonoBehaviour
     {
         if (collision.gameObject.tag != "Wall")
         {
-            grounded = true;    
+            grounded = true;
         }
     }
 
@@ -91,13 +90,13 @@ public class CharacterMovingScript : MonoBehaviour
         return Mathf.Sqrt(2 * jumpHeight * gravity);
     }
 
-	void TurnLeft()
-	{
-		transform.rotation = Quaternion.LookRotation(new Vector3(-100000, 0, 0));
-	}
+    void TurnLeft()
+    {
+        transform.rotation = Quaternion.LookRotation(new Vector3(-100000, 0, 0));
+    }
 
-	void TurnRight()
-	{
-		transform.rotation = Quaternion.LookRotation(new Vector3(100000, 0, 0));
-	}
+    void TurnRight()
+    {
+        transform.rotation = Quaternion.LookRotation(new Vector3(100000, 0, 0));
+    }
 }

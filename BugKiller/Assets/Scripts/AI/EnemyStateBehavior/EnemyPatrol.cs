@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.AI.EnemyStateBehavior
 {
-   public class EnemyPatrol : EnemyState
+    public class EnemyPatrol : EnemyState
     {
         float waypointRadius;
         Transform firstPoint;
         Transform secondPoint;
         Transform currentGoal;
         Vector3 currentHeading;
-          	 Transform player;
-      
+        Transform player;
+
         public EnemyPatrol(
-            float waypointRadius, 
-            Transform firstPoint,  
+            float waypointRadius,
+            Transform firstPoint,
             Transform secondPoint
             )
         {
@@ -25,22 +21,12 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             this.firstPoint = firstPoint;
             this.secondPoint = secondPoint;
             this.currentGoal = secondPoint;
-			
-			   player = GameObject.Find("Character").transform;
-	
+
+            player = GameObject.Find("Character").transform;
         }
 
-        public override void Action(EnemyActivity context) 
+        public override void Action(EnemyActivity context)
         {
-     		
-			if (Vector3.Distance(context.ThisEnemy.position, player.position) <= 4 ) //hardcoded ftw
-            {
-		      context.ChangeState(context.Getchasing());
-              return;
-            }
-			
-			
-			
             //updating direction
             UpdateDirection(context);
 
@@ -54,17 +40,19 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
                 if (currentGoal == firstPoint)
                 {
                     currentGoal = secondPoint;
+                    Debug.Log("Target is second point");
                 }
                 else
                 {
                     currentGoal = firstPoint;
+                    Debug.Log("Target is first point");
                 }
             }
         }
 
         void UpdateDirection(EnemyActivity context)
         {
-            currentHeading = currentGoal.position;
+            currentHeading = new Vector3(currentGoal.position.x - context.ThisEnemy.position.x, 0, 0);
         }
     }
 }
