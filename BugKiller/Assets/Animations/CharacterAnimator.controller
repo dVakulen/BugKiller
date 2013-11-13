@@ -8,30 +8,20 @@ AnimatorController:
   m_Name: CharacterAnimator
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Speed
-    m_Type: 1
-    m_DefaultVector: {x: 0, y: 0, z: 0}
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: Shoot
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: WasRightDirection
-    m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Jump
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Run
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -67,39 +57,13 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110246358}
-  m_TransitionDuration: .0694444478
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: Speed
-    m_EventTreshold: .100000001
-    m_ExitTime: .930555582
-  - m_ConditionMode: 1
-    m_ConditionEvent: WasRightDirection
-    m_EventTreshold: .100000001
-    m_ExitTime: .930555582
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110102873
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110291107}
-  m_DstState: {fileID: 110200000}
-  m_TransitionDuration: .375
+  m_TransitionDuration: .15384616
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WasRightDirection
+    m_ConditionEvent: Run
     m_EventTreshold: 0
-    m_ExitTime: .625
-  - m_ConditionMode: 3
-    m_ConditionEvent: Speed
-    m_EventTreshold: -.100000001
-    m_ExitTime: .625
+    m_ExitTime: .846153855
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -118,28 +82,6 @@ Transition:
     m_ConditionEvent: Shoot
     m_EventTreshold: 0
     m_ExitTime: .5
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110144829
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110291107}
-  m_TransitionDuration: .0694444478
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: WasRightDirection
-    m_EventTreshold: 0
-    m_ExitTime: .930555582
-  - m_ConditionMode: 4
-    m_ConditionEvent: Speed
-    m_EventTreshold: -.100000001
-    m_ExitTime: .930555582
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -176,94 +118,6 @@ Transition:
     m_ConditionEvent: Jump
     m_EventTreshold: 0
     m_ExitTime: .899999976
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110164125
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110246358}
-  m_TransitionDuration: .0694444478
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: WasRightDirection
-    m_EventTreshold: 0
-    m_ExitTime: .930555582
-  - m_ConditionMode: 4
-    m_ConditionEvent: Speed
-    m_EventTreshold: -.100000001
-    m_ExitTime: .930555582
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110169841
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110291107}
-  m_TransitionDuration: .0694444478
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: WasRightDirection
-    m_EventTreshold: 0
-    m_ExitTime: .930555582
-  - m_ConditionMode: 3
-    m_ConditionEvent: Speed
-    m_EventTreshold: .100000001
-    m_ExitTime: .930555582
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110171147
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110246358}
-  m_DstState: {fileID: 110200000}
-  m_TransitionDuration: .375
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: WasRightDirection
-    m_EventTreshold: 0
-    m_ExitTime: .625
-  - m_ConditionMode: 3
-    m_ConditionEvent: Speed
-    m_EventTreshold: -.100000001
-    m_ExitTime: .625
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110174177
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110291107}
-  m_DstState: {fileID: 110200000}
-  m_TransitionDuration: .375
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: Speed
-    m_EventTreshold: .100000001
-    m_ExitTime: .625
-  - m_ConditionMode: 2
-    m_ConditionEvent: WasRightDirection
-    m_EventTreshold: -.100000001
-    m_ExitTime: .625
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -314,12 +168,8 @@ Transition:
   m_TransitionDuration: .375
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: Speed
-    m_EventTreshold: .100000001
-    m_ExitTime: .625
-  - m_ConditionMode: 1
-    m_ConditionEvent: WasRightDirection
+  - m_ConditionMode: 2
+    m_ConditionEvent: Run
     m_EventTreshold: .100000001
     m_ExitTime: .625
   m_Atomic: 1
@@ -449,28 +299,16 @@ StateMachine:
       first: {fileID: 0}
       second: []
     data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
-      - {fileID: 110144829}
-      - {fileID: 110164125}
-      - {fileID: 110169841}
     data:
       first: {fileID: 110246358}
       second:
       - {fileID: 110178681}
-      - {fileID: 110171147}
     data:
       first: {fileID: 110291107}
-      second:
-      - {fileID: 110174177}
-      - {fileID: 110102873}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -96, y: 276, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

@@ -504,7 +504,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138664338}
   m_LocalRotation: {x: 0, y: -.999993205, z: 0, w: -.00368538359}
-  m_LocalPosition: {x: 18.5294476, y: -.0436861515, z: -.419197083}
+  m_LocalPosition: {x: 18.5128193, y: -.0436861515, z: -.422623158}
   m_LocalScale: {x: 3.36036563, y: 1, z: 3.62559962}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2308,7 +2308,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400096, guid: acc998dd4315a97409de16fe199cd642, type: 3}
   m_PrefabInternal: {fileID: 824656006}
   m_GameObject: {fileID: 674488089}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2359,7 +2359,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 88
   m_CollisionDetection: 0
 --- !u!136 &674488094
 CapsuleCollider:
@@ -3027,7 +3027,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768823062}
   m_LocalRotation: {x: 0, y: -.999993205, z: 0, w: -.00368538359}
-  m_LocalPosition: {x: 25.2028027, y: -.078492403, z: -.382335663}
+  m_LocalPosition: {x: 25.2028027, y: -.078492403, z: -.348612785}
   m_LocalScale: {x: 3.36036563, y: 1, z: 3.62559962}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3111,7 +3111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: acc998dd4315a97409de16fe199cd642, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .707106829
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: acc998dd4315a97409de16fe199cd642, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3119,7 +3119,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: acc998dd4315a97409de16fe199cd642, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .707106829
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: acc998dd4315a97409de16fe199cd642, type: 3}
       propertyPath: m_Controller

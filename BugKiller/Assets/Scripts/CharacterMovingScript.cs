@@ -27,16 +27,34 @@ public class CharacterMovingScript : MonoBehaviour
         if (grounded)
         {
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+            Vector3 targetVelocity = new Vector3(-Input.GetAxis("Horizontal"), 0, 0);
             //targetVelocity = transform.TransformDirection(targetVelocity);
-            targetVelocity *= speed;
-            anim.SetFloat("Speed", targetVelocity.x);
+
+			if (targetVelocity.x == 0) 
+			{
+				anim.SetBool("Run", false);
+			}
+			else
+			{
+				anim.SetBool("Run", true);
+				if (targetVelocity.x > 0) 
+				{
+					TurnRight();
+				}
+				else 
+				{
+					TurnLeft();
+				}
+			}
+
+			targetVelocity *= speed;
+            
 
             // Apply a force that attempts to reach our target velocity
             Vector3 velocity = rigidbody.velocity;
-            Vector3 velocityChange = (targetVelocity - velocity);
+            Vector3 velocityChange = targetVelocity - velocity;
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+            //velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
             velocityChange.y = 0;
             rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 
@@ -44,12 +62,12 @@ public class CharacterMovingScript : MonoBehaviour
             if (canJump && Input.GetKeyDown(KeyCode.W))
             {
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
-                
             }
         }
         else
         {
-            anim.SetFloat("Speed", 0);
+			//If we're in air we don't run.
+			anim.SetBool("Run", false);
         }
 
         grounded = false;
@@ -72,4 +90,14 @@ public class CharacterMovingScript : MonoBehaviour
         // for the character to reach at the apex.
         return Mathf.Sqrt(2 * jumpHeight * gravity);
     }
+
+	void TurnLeft()
+	{
+		transform.rotation = Quaternion.LookRotation(new Vector3(-100000, 0, 0));
+	}
+
+	void TurnRight()
+	{
+		transform.rotation = Quaternion.LookRotation(new Vector3(100000, 0, 0));
+	}
 }
