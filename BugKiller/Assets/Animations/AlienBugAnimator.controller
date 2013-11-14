@@ -10,28 +10,24 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: Death
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Attack
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Run
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Wait
     m_Type: 4
-    m_DefaultVector: {x: 0, y: 0, z: 0}
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -54,15 +50,15 @@ Transition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 0}
+  m_SrcState: {fileID: 110259913}
   m_DstState: {fileID: 110226397}
-  m_TransitionDuration: .100000001
+  m_TransitionDuration: .5
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Death
     m_EventTreshold: 0
-    m_ExitTime: .899999976
+    m_ExitTime: .5
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -81,6 +77,24 @@ Transition:
     m_ConditionEvent: Attack
     m_EventTreshold: 0
     m_ExitTime: .25
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+--- !u!1101 &110145768
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110259955}
+  m_DstState: {fileID: 110226397}
+  m_TransitionDuration: 6
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Death
+    m_EventTreshold: 0
+    m_ExitTime: 0
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -117,6 +131,24 @@ Transition:
     m_ConditionEvent: Wait
     m_EventTreshold: 0
     m_ExitTime: .5
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+--- !u!1101 &110188062
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110200000}
+  m_DstState: {fileID: 110226397}
+  m_TransitionDuration: .75
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Death
+    m_EventTreshold: 0
+    m_ExitTime: .25
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -164,7 +196,7 @@ State:
   m_Motions:
   - {fileID: 7400004, guid: 645feb74a67e3f64f98b51fe2310d0ec, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -336, y: 240, z: 0}
+  m_Position: {x: 300, y: 132, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -215,25 +247,27 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110259955}
-      second:
-      - {fileID: 110192541}
-    data:
-      first: {fileID: 110226397}
+      first: {fileID: 0}
       second: []
+    data:
+      first: {fileID: 110200000}
+      second:
+      - {fileID: 110121135}
+      - {fileID: 110188062}
     data:
       first: {fileID: 110259913}
       second:
       - {fileID: 110148255}
       - {fileID: 110163054}
-    data:
-      first: {fileID: 0}
-      second:
       - {fileID: 110100000}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110226397}
+      second: []
+    data:
+      first: {fileID: 110259955}
       second:
-      - {fileID: 110121135}
+      - {fileID: 110192541}
+      - {fileID: 110145768}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -336, y: 108, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
