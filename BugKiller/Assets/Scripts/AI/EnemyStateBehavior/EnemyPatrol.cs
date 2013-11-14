@@ -8,18 +8,15 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Transform firstPoint;
         Transform secondPoint;
         Transform currentGoal;
-        Vector3 currentHeading;
         Transform player;
+        Vector3 currentHeading;
 
-        public EnemyPatrol(
-            float waypointRadius,
-            Transform firstPoint,
-            Transform secondPoint
-            )
+
+        public EnemyPatrol(EnemyController controller)
         {
-            this.waypointRadius = waypointRadius;
-            this.firstPoint = firstPoint;
-            this.secondPoint = secondPoint;
+            this.waypointRadius = controller.WaypointRadius;
+            this.firstPoint = controller.FirstPoint;
+            this.secondPoint = controller.SecondPoint;
             this.currentGoal = secondPoint;
 
             player = GameObject.Find("Character").transform;
@@ -57,7 +54,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         {
             if (Vector3.Distance(context.ThisEnemy.position, player.position) < context.AttentionDistance)
             {
-                context.ChangeState(new EnemyHunting());
+                context.ChangeState(new EnemyHunting(context));
             }
         }
     }

@@ -1,32 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
+/// <summary>
+/// This class represents player state. 
+/// It uses Singleton pattern so that you should get 
+/// object by invoking static property "Instance".
+/// </summary>
+public class Player : LivingEntity
+{
+    private static Player instance;
 
-    /// <summary>
-    /// This class represents player state. 
-    /// It uses Singleton pattern so that you should get 
-    /// object by invoking static property "Instance".
-    /// </summary>
-    public class Player : LivingEntity
+    private Player() { }
+
+    public static Player Instance
     {
-        private static Player instance;
-
-        private Player() { }
-
-        public static Player Instance
+        get
         {
-            get
+            if (instance == null)
             {
-                if (instance == null)
-                {
-                    instance = new Player();
-                }
-                return instance;
+                instance = new Player();
             }
+            return instance;
         }
-	
-	
-	
     }
+}
 

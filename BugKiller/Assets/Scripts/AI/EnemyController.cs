@@ -39,7 +39,6 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawLine(FirstPoint.position, SecondPoint.position);
     }
 
-    // Use this for initialization
     protected void Start()
     {
         if (FirstPoint == null || SecondPoint == null)
@@ -47,29 +46,34 @@ public class EnemyController : MonoBehaviour
             Debug.Log("You have to add two points (two transform object)");
         }
 
-        enemyActivity = new EnemyActivity(transform, rigidbody, Speed, AttentionDistance,
-            new EnemyPatrol(WaypointRadius, FirstPoint, SecondPoint)
-            );
+        enemyActivity = new EnemyActivity(this, new EnemyPatrol(this));
 
         anim = gameObject.GetComponent<Animator>();
     }
 
     protected void Update()
     {
-        enemyActivity.Action();
+        if (model.IsAlive)
+        {
+            enemyActivity.Action();
+        }
     }
 
     void model_OnDying(object obj)
     {
-        Destroy(this.gameObject);
-        anim.enabled = false;
+        GetComponent<Rigidbody>().useGravity = false;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<SphereCollider>().enabled = false;
+        anim.SetBool("Death", true);
+
+        Destroy(this.gameObject, 4);
     }
 
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "bullet")
         {
-            model.Hit(5);
+            model.Damage(5);
         }
     }
 }

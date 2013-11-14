@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(GUIText))]
 public class ObjectLabel : MonoBehaviour
@@ -10,7 +9,7 @@ public class ObjectLabel : MonoBehaviour
     public float clampBorderSize = 0.05f;  // How much viewport space to leave at the borders when a label is being clamped
     public bool useMainCamera = true;   // Use the camera tagged MainCamera
     public Camera cameraToUse;   // Only use this if useMainCamera is false
-    
+
     Camera cam;
     Transform thisTransform;
     Transform camTransform;
@@ -28,11 +27,17 @@ public class ObjectLabel : MonoBehaviour
         camTransform = cam.transform;
 
         EnemyController controller = target.gameObject.GetComponent<EnemyController>();
-		model = controller.GetEnemyModel();
-		Debug.Log(model);
+        model = controller.GetEnemyModel();
+        model.OnDying += model_OnDying;
         guiText = GetComponent<GUIText>();
     }
-    
+
+    void model_OnDying(object obj)
+    {
+        guiText.enabled = false;
+        Destroy(gameObject);
+    }
+
     void Update()
     {
         if (clampToScreen)
@@ -43,7 +48,6 @@ public class ObjectLabel : MonoBehaviour
             thisTransform.position = new Vector3(Mathf.Clamp(thisTransform.position.x, clampBorderSize, 1.0f - clampBorderSize),
                                              Mathf.Clamp(thisTransform.position.y, clampBorderSize, 1.0f - clampBorderSize),
                                              thisTransform.position.z);
-
         }
         else
         {

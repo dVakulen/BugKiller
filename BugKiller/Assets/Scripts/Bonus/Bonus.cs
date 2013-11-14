@@ -27,7 +27,7 @@ using UnityEngine;
         if (collision.gameObject.tag == "Player")
         {
 				
-            play.Hit(-additionalhp);
+            play.Damage(-additionalhp);
 			Destroy(this.gameObject);
         }
     }

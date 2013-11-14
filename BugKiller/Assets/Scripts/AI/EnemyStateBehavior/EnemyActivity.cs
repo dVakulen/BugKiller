@@ -8,17 +8,26 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Transform thisEnemy;
         Rigidbody rigidBody;
         float speed;
-        EnemyPatrol enemypatrol;
         float attentionDistance;
+        EnemyController enemyController;
 
-        public EnemyActivity(Transform thisEnemy, Rigidbody rigidBody, float speed, float attDist, EnemyState state)
+        public EnemyActivity(EnemyController controller, EnemyState state)
         {
-            this.thisEnemy = thisEnemy;
-            this.rigidBody = rigidBody;
-            this.speed = speed;
-            this.attentionDistance = attDist;
+            enemyController = controller;
+            this.thisEnemy = controller.transform;
+            this.rigidBody = controller.rigidbody;
+            this.speed = controller.Speed;
+            this.attentionDistance = controller.AttentionDistance;
 
             currentState = state;
+        }
+
+        public EnemyController EnemyContoller
+        {
+            get
+            {
+                return enemyController;
+            }
         }
 
         public Transform ThisEnemy
