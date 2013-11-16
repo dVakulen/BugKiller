@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bonus : MonoBehaviour
+public class HPBonus : MonoBehaviour
 {
     public int AdditionalHP = 25;
 
@@ -11,17 +11,10 @@ public class Bonus : MonoBehaviour
         player = Player.Instance;
     }
 
-    /*   void Update()
-       {
-           this.gameObject.transform.Rotate(0, 2, 0);
-       }*/
-
-
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-
             player.ReceiveHPBonus(AdditionalHP);
             Destroy(this.gameObject);
         }
