@@ -76,6 +76,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -109,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e967b546acbb164c841c69008a2d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
+  speed: 40
   MaxDistance: 10000
   LifeTime: 10
   Effect: {fileID: 0}

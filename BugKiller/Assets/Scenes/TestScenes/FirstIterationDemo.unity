@@ -2121,7 +2121,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400124, guid: acc998dd4315a97409de16fe199cd642, type: 3}
   m_PrefabInternal: {fileID: 824656006}
   m_GameObject: {fileID: 594744041}
-  m_LocalRotation: {x: .961248815, y: -9.9890535e-08, z: .275682449, w: 9.52532631e-08}
+  m_LocalRotation: {x: .961248815, y: -8.4523343e-08, z: .275682449, w: -4.23640785e-08}
   m_LocalPosition: {x: -.129245549, y: 5.31142197e-09, z: -5.587935e-09}
   m_LocalScale: {x: 1.00000012, y: 1, z: .999999881}
   m_Children: []
@@ -2332,7 +2332,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400072, guid: acc998dd4315a97409de16fe199cd642, type: 3}
   m_PrefabInternal: {fileID: 824656006}
   m_GameObject: {fileID: 628613733}
-  m_LocalRotation: {x: .954916954, y: -1.16392289e-06, z: -.296873122, w: -3.51195672e-06}
+  m_LocalRotation: {x: .954916954, y: -1.14817635e-06, z: -.296873122, w: 3.51297899e-06}
   m_LocalPosition: {x: -.454214722, y: 3.84230603e-08, z: 0}
   m_LocalScale: {x: .999999881, y: 1, z: .999999881}
   m_Children:
@@ -2452,7 +2452,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .159999996
+  m_Radius: .800000012
   m_Height: 1.96000004
   m_Direction: 1
   m_Center: {x: 0, y: .970000029, z: 0}
@@ -2467,9 +2467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9345de232b01c143b5225fe43be7c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  resetAfterDeathTime: 5
-  deathClip: {fileID: 0}
 --- !u!1 &681981189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,7 +2944,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400126, guid: acc998dd4315a97409de16fe199cd642, type: 3}
   m_PrefabInternal: {fileID: 824656006}
   m_GameObject: {fileID: 751994116}
-  m_LocalRotation: {x: .961248815, y: -9.9890535e-08, z: .275682449, w: 9.52532631e-08}
+  m_LocalRotation: {x: .961248815, y: -8.4523343e-08, z: .275682449, w: -4.23640785e-08}
   m_LocalPosition: {x: -.129245564, y: 2.02125836e-08, z: 1.86264504e-09}
   m_LocalScale: {x: 1.00000012, y: 1, z: .999999881}
   m_Children: []
@@ -5269,7 +5266,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400070, guid: acc998dd4315a97409de16fe199cd642, type: 3}
   m_PrefabInternal: {fileID: 824656006}
   m_GameObject: {fileID: 1456509294}
-  m_LocalRotation: {x: .954916954, y: 1.00430725e-06, z: -.296873122, w: 3.46233401e-06}
+  m_LocalRotation: {x: .954916954, y: 1.02395074e-06, z: -.296873122, w: -3.44876662e-06}
   m_LocalPosition: {x: -.454214722, y: 3.09724797e-08, z: 0}
   m_LocalScale: {x: .999999881, y: 1, z: .999999881}
   m_Children:
@@ -5298,7 +5295,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400058, guid: acc998dd4315a97409de16fe199cd642, type: 3}
   m_PrefabInternal: {fileID: 824656006}
   m_GameObject: {fileID: 1459329321}
-  m_LocalRotation: {x: .707105935, y: .00109317363, z: .707105935, w: -.00109317363}
+  m_LocalRotation: {x: .707106829, y: 3.11577642e-05, z: .707106829, w: -3.11577642e-05}
   m_LocalPosition: {x: 0, y: 1.5, z: 1}
   m_LocalScale: {x: .00110239093, y: .00110239093, z: .00110239093}
   m_Children:
@@ -5417,7 +5414,7 @@ MonoBehaviour:
   damage: 50
   BulletObject: {fileID: 100002, guid: 5fd7de80fff20ee4fa23e6d52062d68c, type: 2}
   MuzzleFlash: {fileID: 750663062}
-  AdditionalVector: {x: -.300000012, y: 0, z: 0}
+  AdditionalVector: {x: -.200000003, y: 0, z: 0}
   AdditionalRotation: {x: 1, y: 1, z: 1, w: 1}
 --- !u!1 &1460933459
 GameObject:
@@ -5664,7 +5661,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .800000012
+  m_Radius: .899999976
   m_Center: {x: 0, y: .699999988, z: .119999997}
 --- !u!114 &1606409833
 MonoBehaviour:

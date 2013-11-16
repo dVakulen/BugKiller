@@ -28,7 +28,8 @@ public class ShootingScript : MonoBehaviour
         {
             anim.SetBool("Shoot", true);
             MuzzleFlash.SetActive(true);
-            Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);
+			AdditionalVector.x*=this.transform.forward.z;// z because we have some issues with character Axises
+			Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);
             coolDownRemaining = coolDown;
         }
         else
