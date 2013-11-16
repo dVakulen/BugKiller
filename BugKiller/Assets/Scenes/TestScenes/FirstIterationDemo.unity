@@ -281,7 +281,6 @@ GameObject:
   - 111: {fileID: 23099484}
   - 114: {fileID: 23099483}
   - 65: {fileID: 23099482}
-  - 65: {fileID: 23099481}
   m_Layer: 0
   m_Name: HealthObject 1
   m_TagString: Untagged
@@ -289,19 +288,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &23099481
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 908d5985ed3f19741a0b9950d7ab8cdf,
-    type: 2}
-  m_PrefabInternal: {fileID: 853298566}
-  m_GameObject: {fileID: 23099480}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .724529982, y: .724529982, z: .168924004}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &23099482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -327,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73874e62e8696554f865115a94359619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AdditionalHP: 25
+  AdditionalHP: 20
 --- !u!111 &23099484
 Animation:
   m_ObjectHideFlags: 0
@@ -580,7 +566,6 @@ GameObject:
   - 111: {fileID: 55978304}
   - 114: {fileID: 55978303}
   - 65: {fileID: 55978302}
-  - 65: {fileID: 55978301}
   m_Layer: 0
   m_Name: HealthObject 1
   m_TagString: Untagged
@@ -600,19 +585,6 @@ Transform:
   m_Children:
   - {fileID: 1223288916}
   m_Father: {fileID: 1007120702}
---- !u!65 &55978301
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 908d5985ed3f19741a0b9950d7ab8cdf,
-    type: 2}
-  m_PrefabInternal: {fileID: 635378257}
-  m_GameObject: {fileID: 55978299}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .724529982, y: .724529982, z: .168924004}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &55978302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -638,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73874e62e8696554f865115a94359619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AdditionalHP: 25
+  AdditionalHP: 20
 --- !u!111 &55978304
 Animation:
   m_ObjectHideFlags: 0
@@ -1426,7 +1398,6 @@ GameObject:
   - 111: {fileID: 195749107}
   - 114: {fileID: 195749106}
   - 65: {fileID: 195749113}
-  - 65: {fileID: 195749112}
   m_Layer: 0
   m_Name: HealthObject
   m_TagString: Untagged
@@ -1446,7 +1417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73874e62e8696554f865115a94359619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AdditionalHP: 25
+  AdditionalHP: 20
 --- !u!111 &195749107
 Animation:
   m_ObjectHideFlags: 0
@@ -1516,24 +1487,11 @@ Transform:
   m_PrefabInternal: {fileID: 1996195241}
   m_GameObject: {fileID: 195749105}
   m_LocalRotation: {x: 0, y: -.999993205, z: 0, w: -.00368538359}
-  m_LocalPosition: {x: -20.4181137, y: -10.9852657, z: 4.97443676}
+  m_LocalPosition: {x: -20.3322659, y: -10.9852657, z: 4.97443676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1907645337}
   m_Father: {fileID: 1007120702}
---- !u!65 &195749112
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 908d5985ed3f19741a0b9950d7ab8cdf,
-    type: 2}
-  m_PrefabInternal: {fileID: 1996195241}
-  m_GameObject: {fileID: 195749105}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .724529982, y: .724529982, z: .168924004}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &195749113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10694,7 +10652,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 908d5985ed3f19741a0b9950d7ab8cdf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20.4181137
+      value: -20.3322659
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 908d5985ed3f19741a0b9950d7ab8cdf, type: 2}
       propertyPath: m_LocalPosition.y
