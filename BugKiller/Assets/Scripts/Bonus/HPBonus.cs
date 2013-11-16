@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HPBonus : MonoBehaviour
 {
-    public int AdditionalHP = 25;
+    public int AdditionalHP = 20;
 
     Player player;
 
