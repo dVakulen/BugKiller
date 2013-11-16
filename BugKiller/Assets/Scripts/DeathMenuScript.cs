@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DeathMenuScript : MonoBehaviour {
 
-	public GUISkin skin;
+	public GUITexture image;
 	public GameObject buttonTexture;
 	public string levelName = "FirstIterationDemo";
 
@@ -14,16 +14,16 @@ public class DeathMenuScript : MonoBehaviour {
 
 	void ShowDeathMenu()
 	{
-		GUILayout.BeginArea(new Rect((Screen.width*0.5f-50),(Screen.height*0.5f-50),100,100));
+		GUILayout.BeginArea(new Rect((Screen.width*0.5f-50),(Screen.height*0.5f+65),100,200));
 		if(GUILayout.Button("Restart"))
 		{
 			//load needed level
 			Application.LoadLevel(levelName);
 		}
-		if(GUILayout.Button("Exit"))
+		if(GUILayout.Button("Main Menu"))
 		{
-			//Exit game
-			Application.Quit();
+			//MainMenu
+			Application.LoadLevel("MainManu");
 		}
 		GUILayout.EndArea();
 	}
