@@ -11,7 +11,7 @@ public class DeathController : MonoBehaviour
     }
 
     void player_OnDying(object obj)
-    {
+	{
         Application.LoadLevel("DeathScreen");
     }
 }
