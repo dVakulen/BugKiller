@@ -24,14 +24,11 @@ public class ShootingScript : MonoBehaviour
     {
         coolDownRemaining -= Time.deltaTime;
 
-        if (Input.GetMouseButton(0) && coolDownRemaining <= 0)
+        if (Input.GetMouseButton(0) && coolDownRemaining <= 0 && Player.Instance.IsAlive)
         {
             anim.SetBool("Shoot", true);
             MuzzleFlash.SetActive(true);
-			if((this.transform.forward.z>0 && AdditionalVector.x>0) ||(this.transform.forward.z<0 && AdditionalVector.x<0))
-			{// z because we have some issues with character Axises
-				AdditionalVector.x*=-1;
-			}
+			AdditionalVector.x*=this.transform.forward.z;// z because we have some issues with character Axises
 			Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);
             coolDownRemaining = coolDown;
         }
