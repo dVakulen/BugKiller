@@ -21,5 +21,14 @@ public class Player : LivingEntity
             return instance;
         }
     }
+
+    public void ReceiveHPBonus(int hp)
+    {
+        health = health + hp;
+        if (health > 100)
+        {
+            health = 100;
+        }
+    }
 }
 

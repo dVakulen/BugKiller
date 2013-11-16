@@ -10,8 +10,8 @@ public abstract class LivingEntity
     /// </summary>
     public event Action<object> OnDying;
 
-    float health;
-    float defenceModifier;
+    protected float health;
+    protected float defenceModifier;
 
     protected LivingEntity(float health = 100, float defModifier = 1)
     {

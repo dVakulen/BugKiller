@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74412c4db4425544c9138fa74cea8280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalhp: 25
+  AdditionalHP: 25
 --- !u!111 &195749107
 Animation:
   m_ObjectHideFlags: 0

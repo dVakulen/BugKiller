@@ -1,36 +1,31 @@
-using System;
 using UnityEngine;
 
-	public class Bonus :MonoBehaviour
-	{
-		
-		public int additionalhp =25;
-		Player play;
-		public Bonus ()
-		{
-		}
-		   	void Awake ()
-	{
-		
-       
-        play = Player.Instance;
+public class Bonus : MonoBehaviour
+{
+    public int AdditionalHP = 25;
 
-	}
-	void Update()
-	{
-		this.gameObject.transform.Rotate(0,2,0);
-	}
-	
-		
-		void OnTriggerEnter(Collider collision) 
+    Player player;
+
+    void Awake()
+    {
+        player = Player.Instance;
+    }
+
+    /*   void Update()
+       {
+           this.gameObject.transform.Rotate(0, 2, 0);
+       }*/
+
+
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-				
-            play.Damage(-additionalhp);
-			Destroy(this.gameObject);
+
+            player.ReceiveHPBonus(AdditionalHP);
+            Destroy(this.gameObject);
         }
     }
-	}
+}
 
 
