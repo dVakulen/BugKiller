@@ -10,7 +10,7 @@ public class ShootingScript : MonoBehaviour
     public GameObject MuzzleFlash;
     public Vector3 AdditionalVector;
     public Quaternion AdditionalRotation;
-	bool shooterIsDead = false;
+	bool pause = false;
 
     float coolDownRemaining = 0;
     Animator anim;
@@ -19,19 +19,19 @@ public class ShootingScript : MonoBehaviour
     {
         MuzzleFlash.SetActive(false);
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-		Player.Instance.OnDying+=ShooterIsDead;
+		PauseScript.OnPause+=Paused;
     }
 
-	void ShooterIsDead(object o)
+	void Paused(object o)
 	{
-		shooterIsDead = true;
+		pause = !pause;
 	}
 
     void Update()
     {
         coolDownRemaining -= Time.deltaTime;
 
-        if (Input.GetMouseButton(0) && coolDownRemaining <= 0 && !shooterIsDead)
+        if (Input.GetMouseButton(0) && coolDownRemaining <= 0 && !pause)
         {
             anim.SetBool("Shoot", true);
             MuzzleFlash.SetActive(true);
