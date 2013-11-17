@@ -8499,7 +8499,7 @@ MonoBehaviour:
   damage: 50
   BulletObject: {fileID: 100002, guid: 5fd7de80fff20ee4fa23e6d52062d68c, type: 2}
   MuzzleFlash: {fileID: 750663062}
-  AdditionalVector: {x: -.200000003, y: 0, z: 0}
+  AdditionalVector: {x: .200000003, y: 0, z: 0}
   AdditionalRotation: {x: 1, y: 1, z: 1, w: 1}
 --- !u!1 &1460933459
 GameObject:

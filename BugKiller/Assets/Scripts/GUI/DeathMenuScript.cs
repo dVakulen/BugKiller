@@ -18,6 +18,7 @@ public class DeathMenuScript : MonoBehaviour {
 		if(GUILayout.Button("Restart"))
 		{
 			//load needed level
+			Player.RestorePlayer();
 			Application.LoadLevel(levelName);
 		}
 		if(GUILayout.Button("Main Menu"))
