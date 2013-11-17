@@ -22,6 +22,15 @@ public class Player : LivingEntity
         }
     }
 
+    /// <summary>
+    /// Creates new player object (can be used for restart level and so on)
+    /// </summary>
+    public static void RestorePlayer()
+    {
+        instance = new Player();
+    }
+
+
     public void ReceiveHPBonus(int hp)
     {
         health = health + hp;

@@ -2,7 +2,6 @@
 
 public class LevelGUI : MonoBehaviour
 {
-
     Player player = Player.Instance;
 
     void OnGUI()
