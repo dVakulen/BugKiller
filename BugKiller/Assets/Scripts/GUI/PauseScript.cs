@@ -73,10 +73,10 @@ public class PauseScript : MonoBehaviour {
 			Application.LoadLevel("Settings");
 		}
 		
-		if(GUILayout.Button("Exit"))
+		if(GUILayout.Button("Main Menu"))
 		{
 			//Quit
-			Application.Quit();
+			Application.LoadLevel(0);
 		}
 		GUILayout.EndArea();
 	}

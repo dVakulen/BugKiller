@@ -24,7 +24,7 @@ public class DeathMenuScript : MonoBehaviour {
 		if(GUILayout.Button("Main Menu"))
 		{
 			//MainMenu
-			Application.LoadLevel("MainManu");
+			Application.LoadLevel(0);
 		}
 		GUILayout.EndArea();
 	}
