@@ -2,7 +2,7 @@
 
 public class ShootingScript : MonoBehaviour
 {
-
+	public AudioClip firesound;
     public float range = 100f;
     public float coolDown = 1f;
     public float damage = 50f;
@@ -30,10 +30,15 @@ public class ShootingScript : MonoBehaviour
     void Update()
     {
         coolDownRemaining -= Time.deltaTime;
-
+		if(coolDownRemaining*1.1<coolDown) { 
+			audio.Stop();
+		}
         if (Input.GetMouseButton(0) && coolDownRemaining <= 0 && !pause)
-        {
+		{
             anim.SetBool("Shoot", true);
+			audio.pitch = coolDown;
+
+			audio.PlayOneShot(firesound,1);
             MuzzleFlash.SetActive(true);
 			if(this.transform.forward.z>0 && AdditionalVector.x>0 ||this.transform.forward.z<0 && AdditionalVector.x<0)
 			{

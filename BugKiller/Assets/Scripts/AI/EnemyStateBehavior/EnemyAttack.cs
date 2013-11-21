@@ -8,6 +8,8 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Player target;
         Animator anim;
         Transform player;
+		AudioSource audio;
+		AudioClip sound;
 
         //It should be in model class actually.
         Timer attackTimer;
@@ -39,6 +41,10 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             {
                 Debug.Log("Can attack now");
                 anim.SetBool("Attack", true);
+				audio = GameObject.Find("Character").audio;
+				sound = SoundManager.GetPlayerHitted();
+				audio.PlayOneShot(sound, Random.Range((float)0.8, (float)1.2));
+
                 target.Damage(10);
                 canAttack = false;
             }
