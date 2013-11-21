@@ -99,7 +99,7 @@ TextMesh:
   m_GameObject: {fileID: 100000}
   m_Text: Text
   m_OffsetZ: 0
-  m_CharacterSize: .720000029
+  m_CharacterSize: .600000024
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -119,10 +119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62e31742a340c374c885fea9bc5e2a2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isQuit: 0
+  hover: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
