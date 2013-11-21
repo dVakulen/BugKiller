@@ -8,9 +8,12 @@ public class PauseScript : MonoBehaviour {
 	public static bool paused = false;
 	public GameObject menu;
 	public static event Action<object> OnPause;
+	 AudioSource audiosource;
+	public AudioClip []  soundOpClose;
 
 	void Start()
 	{
+		audiosource = GameObject.Find("Character").audio;
 		menu.SetActive(false);
 	}
 
@@ -38,6 +41,15 @@ public class PauseScript : MonoBehaviour {
 			menu.SetActive(paused);
 			if(OnPause!=null)
 				OnPause(this);
+			if(paused)
+			{
+				audiosource.PlayOneShot(soundOpClose[0],UnityEngine.Random.Range((float)0.8, (float)1.2));
+			}
+			else
+			{
+				audiosource.PlayOneShot(soundOpClose[1], UnityEngine.Random.Range((float)0.8, (float)1.2));
+				
+			}
 		}
 	}
 	
@@ -46,6 +58,7 @@ public class PauseScript : MonoBehaviour {
 		if(OnPause!=null)
 			OnPause(new object());
 		paused=!paused;
+
 		Debug.Log(paused);
 	}
 }

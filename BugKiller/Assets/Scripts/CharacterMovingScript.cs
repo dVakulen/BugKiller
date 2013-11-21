@@ -3,15 +3,17 @@
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
 public class CharacterMovingScript : MonoBehaviour
-{
-
-    public float speed = 10.0f;
+{  
+//	public SignalSender  footstepSignals  ;
+	 public float speed = 10.0f;
     public float gravity = 10.0f;
     public float maxVelocityChange = 10.0f;
     public bool canJump = true;
     public float jumpHeight = 2.0f;
-
-    bool grounded = false;
+	public AudioSource audiosource;
+	AudioClip sound;
+	private float walkAudioTimer   = 0.0f;
+	 bool grounded = false;
     Animator anim;
 
     void Awake()
@@ -32,10 +34,12 @@ public class CharacterMovingScript : MonoBehaviour
             if (targetVelocity.x == 0)
             {
                 anim.SetBool("Run", false);
+				walkAudioTimer = 0;
             }
             else
             {
                 anim.SetBool("Run", true);
+
                 if (targetVelocity.x > 0)
                 {
                     TurnRight();
@@ -45,7 +49,18 @@ public class CharacterMovingScript : MonoBehaviour
                     TurnLeft();
                 }
             }
-
+		
+			if(anim.GetBool("Run") )
+			{
+				if(walkAudioTimer>0.3)
+				{
+			sound = SoundManager.GetPlayerFootstepSound();
+				audiosource.pitch = Random.Range ((float)0.98, (float)1.02);
+				audiosource.PlayOneShot(sound, Random.Range((float)0.8, (float)1.2));
+					walkAudioTimer = 0;
+				}
+				walkAudioTimer += Time.deltaTime;
+			}
             targetVelocity *= speed;
 
 
