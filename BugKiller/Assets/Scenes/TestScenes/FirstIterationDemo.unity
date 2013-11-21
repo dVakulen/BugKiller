@@ -7647,7 +7647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082401c0f982fc24abd8f80ad8c2a3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseImage: {fileID: 0}
 --- !u!114 &1334665373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7802,13 +7801,12 @@ Transform:
 --- !u!114 &1356067994
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: cef92285a75703241916c8c0a3fb755b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1517175079}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1356067992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c381a6b577059cb41ad87ff574836a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 293a2c1047ae15644bbc627b6d8bfb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1356067995
@@ -7845,7 +7843,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1517175079}
   m_GameObject: {fileID: 1356067992}
-  m_Text: Quit game
+  m_Text: Main menu
   m_OffsetZ: 0
   m_CharacterSize: .600000024
   m_LineSpacing: 1
@@ -9089,8 +9087,13 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -2.01543403
       objectReference: {fileID: 0}
+    - target: {fileID: 10200000, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
+      propertyPath: m_Text
+      value: Main menu
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
+    - {fileID: 11400002, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
   m_RootGameObject: {fileID: 1149196637}
   m_IsPrefabParent: 0
