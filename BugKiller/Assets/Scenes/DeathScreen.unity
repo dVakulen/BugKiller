@@ -179,7 +179,8 @@ Prefab:
       propertyPath: m_Text
       value: Restart game
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
   m_RootGameObject: {fileID: 1782306471}
   m_IsPrefabParent: 0
@@ -496,13 +497,12 @@ Transform:
 --- !u!114 &1854824614
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: cef92285a75703241916c8c0a3fb755b,
-    type: 2}
-  m_PrefabInternal: {fileID: 629417752}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1854824612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1357f93a0c25aa44180cf147fc6b1313, type: 3}
+  m_Script: {fileID: 11500000, guid: ee54f840e85410b4ab8286869d93c885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StartLevel: FirstIterationDemo
