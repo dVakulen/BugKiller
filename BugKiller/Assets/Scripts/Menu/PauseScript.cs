@@ -20,12 +20,12 @@ public class PauseScript : MonoBehaviour {
 	void Update()
 	{
 		menu.transform.position = this.transform.position + new Vector3(0,-1,4);
+		menu.SetActive(paused);
 		if(paused)
 		{
 			Time.timeScale = 0;
 			Screen.showCursor = true;
 			Screen.lockCursor = false;
-			Debug.Log("Pause!");
 
 		}
 		else
@@ -39,7 +39,6 @@ public class PauseScript : MonoBehaviour {
 		{
 			paused = !paused;
 			Debug.Log(paused);
-			menu.SetActive(paused);
 			if(OnPause!=null)
 				OnPause(this);
 			if(paused)
@@ -59,12 +58,18 @@ public class PauseScript : MonoBehaviour {
 		Quaternion lookAtRotation = Quaternion.LookRotation(relPlayerPosition, Vector3.up);
 		transform.rotation = Quaternion.Lerp(transform.rotation, lookAtRotation,0);
 	}
+
+	public static void Unpause()
+	{
+		Time.timeScale = 1;
+		Screen.showCursor = false;
+		Screen.lockCursor = true;
+	}
+
 	public static void CallOnPause()
 	{
+		paused=!paused;
 		if(OnPause!=null)
 			OnPause(new object());
-		paused=!paused;
-
-		Debug.Log(paused);
 	}
 }

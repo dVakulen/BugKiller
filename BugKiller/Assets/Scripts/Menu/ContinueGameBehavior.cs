@@ -15,8 +15,7 @@ public class ContinueGameBehavior : MonoBehaviour {
 	
 	void OnMouseDown()
 	{	
-		var menu = GameObject.Find("Menu");
-		menu.SetActive(false);
+		PauseScript.Unpause();
 		PauseScript.CallOnPause();
 	}
 }
