@@ -68,6 +68,7 @@ public class PauseScript : MonoBehaviour {
 
 	public static void CallOnPause()
 	{
+		Debug.Log("Called");
 		paused=!paused;
 		if(OnPause!=null)
 			OnPause(new object());
