@@ -19,13 +19,14 @@ public class PauseScript : MonoBehaviour {
 
 	void Update()
 	{
-		menu.transform.position = this.transform.position + new Vector3(0,0,6);
+		menu.transform.position = this.transform.position + new Vector3(0,-1,4);
 		if(paused)
 		{
 			Time.timeScale = 0;
 			Screen.showCursor = true;
 			Screen.lockCursor = false;
 			Debug.Log("Pause!");
+
 		}
 		else
 		{
@@ -52,7 +53,12 @@ public class PauseScript : MonoBehaviour {
 			}
 		}
 	}
-	
+	void LookAtCamera()
+	{
+		Vector3 relPlayerPosition = GameObject.Find("Main Camera").gameObject.transform.position - transform.position;
+		Quaternion lookAtRotation = Quaternion.LookRotation(relPlayerPosition, Vector3.up);
+		transform.rotation = Quaternion.Lerp(transform.rotation, lookAtRotation,0);
+	}
 	public static void CallOnPause()
 	{
 		if(OnPause!=null)
