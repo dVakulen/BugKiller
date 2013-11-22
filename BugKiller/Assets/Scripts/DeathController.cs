@@ -17,6 +17,7 @@ public class DeathController : MonoBehaviour
 		sound = SoundManager.GetPlayerScreams();
 		audiosource.PlayOneShot(sound, Random.Range((float)0.8, (float)1.2));
 		System.Threading.Thread.Sleep(1500);
+		Player.RestorePlayer();
         Application.LoadLevel("DeathScreen");
     }
 }
