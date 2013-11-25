@@ -4328,7 +4328,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 723915299}
-  - 114: {fileID: 723915300}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -4352,21 +4351,6 @@ Transform:
   - {fileID: 1437015123}
   - {fileID: 304110989}
   m_Father: {fileID: 0}
---- !u!114 &723915300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 723915298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d22d3a4524ecd24e9668acd649a3430, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bugFootstepSounds: []
-  playerScreams: []
-  playerFootstepSounds: []
-  playerHitted: []
 --- !u!1 &749463081
 GameObject:
   m_ObjectHideFlags: 0
