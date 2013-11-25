@@ -6787,6 +6787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 1577654889}
+  sound: {fileID: 8300000, guid: a8e3f65af4f68604bb973fab0e47891e, type: 3}
 --- !u!1 &1149040260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7702,6 +7703,18 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106829
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 1577654889}
+    - target: {fileID: 11400004, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8300000, guid: a8e3f65af4f68604bb973fab0e47891e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
   m_RootGameObject: {fileID: 1141546854}
@@ -10031,7 +10044,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10042,9 +10055,9 @@ AudioSource:
   MaxDistance: 5000
   Pan2D: -1
   rolloffMode: 1
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
