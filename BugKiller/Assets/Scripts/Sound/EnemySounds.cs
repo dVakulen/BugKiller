@@ -20,7 +20,7 @@ public class EnemySounds : MonoBehaviour
 		{
 		if(anim.GetBool("Run") )
 		{
-			if(walkAudioTimer>0.3)
+			if(walkAudioTimer>0.2)
 			{
 				sound = SoundManager.GetBugFootstepSounds();
 				audiosource.PlayOneShot(sound, 1);
