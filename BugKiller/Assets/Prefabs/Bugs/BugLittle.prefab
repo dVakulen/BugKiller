@@ -2450,7 +2450,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .899999976
-  m_Center: {x: 0, y: .699999988, z: .119999997}
+  m_Center: {x: 0, y: .850000024, z: .119999997}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
