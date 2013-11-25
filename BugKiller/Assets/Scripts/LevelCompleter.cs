@@ -7,7 +7,7 @@ public class LevelCompleter : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player") 
 		{
-			Application.LoadLevel("MainScreen");
+			Application.LoadLevel("Coridor");
 		}
 	}
 }

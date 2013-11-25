@@ -195,8 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e607997c7f58afe4895a2507e6f8f3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartGame: {fileID: 0}
-  QuitGame: {fileID: 0}
 --- !u!1001 &799026172
 Prefab:
   m_ObjectHideFlags: 0
@@ -299,7 +297,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: cef92285a75703241916c8c0a3fb755b, type: 2}
   m_RootGameObject: {fileID: 264772738}
   m_IsPrefabParent: 0
@@ -509,7 +508,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1327921034}
   m_GameObject: {fileID: 1905607765}
-  m_Text: Start game
+  m_Text: New game
   m_OffsetZ: 0
   m_CharacterSize: .600000024
   m_LineSpacing: 1
@@ -548,16 +547,15 @@ Renderer:
 --- !u!114 &1905607771
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: cef92285a75703241916c8c0a3fb755b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1327921034}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1905607765}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1357f93a0c25aa44180cf147fc6b1313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLevel: FirstIterationDemo
+  StartLevel: Coridor
 --- !u!1 &2038101741
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NewGameBehavior : MonoBehaviour {
 
-	public string StartLevel = "FirstIterationDemo";
+	public string StartLevel = "Coridor";
 	// Use this for initialization
 	void Start () {
 		Screen.showCursor = true;

@@ -17,6 +17,6 @@ public class RestartFromPauseGameBehavior : MonoBehaviour {
 	{
 		PauseScript.CallOnPause();
 		Player.RestorePlayer();
-		Application.LoadLevel(StartLevel);		
+		Application.LoadLevel(Application.loadedLevelName);		
 	}
 }
