@@ -49,7 +49,7 @@ public class CharacterMovingScript : MonoBehaviour
                     TurnLeft();
                 }
             }
-		
+		/*
 			if(anim.GetBool("Run") )
 			{
 				if(walkAudioTimer>0.3)
@@ -60,7 +60,8 @@ public class CharacterMovingScript : MonoBehaviour
 					walkAudioTimer = 0;
 				}
 				walkAudioTimer += Time.deltaTime;
-			}
+			}*/
+
             targetVelocity *= speed;
 
 
