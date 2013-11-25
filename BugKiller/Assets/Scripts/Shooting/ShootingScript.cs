@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
-{
+{   public AudioSource audio;
 	public AudioClip firesound;
     public float range = 100f;
 	public static float damage = 0f;
