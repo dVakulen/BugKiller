@@ -576,6 +576,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1565,7 +1566,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100074}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: .134770393, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400100}
@@ -2185,7 +2186,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: c7b8685e162577f41b72736b13f8be7a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2228,7 +2229,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: .524999976
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2243,7 +2244,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 6dd68852b118473409847e4a22da44e9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2345,6 +2346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0e700b8879a64c82f651455279578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 8200000}
   firesound: {fileID: 8300000, guid: c7b8685e162577f41b72736b13f8be7a, type: 3}
   range: 100
   BulletObject: {fileID: 100002, guid: 5fd7de80fff20ee4fa23e6d52062d68c, type: 2}
@@ -2367,6 +2369,18 @@ MonoBehaviour:
   maxVelocityChange: 10
   canJump: 1
   jumpHeight: 1.39999998
+  audiosource: {fileID: 8200002}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a30e5a1039fb94dbb1362a3f8a1a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   audiosource: {fileID: 8200002}
 --- !u!136 &13600000
 CapsuleCollider:
