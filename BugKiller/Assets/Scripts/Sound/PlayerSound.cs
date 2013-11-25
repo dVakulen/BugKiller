@@ -4,12 +4,13 @@ using System.Collections;
 public class PlayerSound : MonoBehaviour
 {
 		public AudioSource audiosource;
-		AudioClip sound;
+	public AudioClip sound;
 		private float walkAudioTimer = 0.0f;
 		Animator anim;
-
+	SoundManager sm;
 		void Start ()
 		{
+		sm = GameObject.Find("SoundManager").GetComponent<SoundManager>();
 				anim = gameObject.GetComponent<Animator> ();
 		}
 	
@@ -17,7 +18,8 @@ public class PlayerSound : MonoBehaviour
 		{
 				if (anim.GetBool ("Run")) {
 						if (walkAudioTimer > 0.3) {
-								sound = SoundManager.GetPlayerFootstepSound ();
+							sound = SoundManager.GetPlayerFootstepSound ();
+			
 								audiosource.pitch = (1);
 								audiosource.PlayOneShot (sound, 1);
 								walkAudioTimer = 0;

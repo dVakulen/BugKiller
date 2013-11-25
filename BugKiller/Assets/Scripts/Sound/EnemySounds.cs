@@ -6,12 +6,13 @@ public class EnemySounds : MonoBehaviour
 	public AudioSource audiosource;
 	AudioClip sound;
 	
-	private float walkAudioTimer   = 0.0f;
+	private float walkAudioTimer   ;
 	Animator anim;
 
 
 		void Start ()
 		{
+		walkAudioTimer =0;
 		anim = gameObject.GetComponent<Animator>();
 		}
 	
@@ -22,7 +23,7 @@ public class EnemySounds : MonoBehaviour
 			if(walkAudioTimer>0.3)
 			{
 				sound = SoundManager.GetBugFootstepSounds();
-				audiosource.PlayOneShot(sound, Random.Range((float)0.8, (float)1.2));
+				audiosource.PlayOneShot(sound, 1);
 				walkAudioTimer = 0;
 			}
 			walkAudioTimer += Time.deltaTime;

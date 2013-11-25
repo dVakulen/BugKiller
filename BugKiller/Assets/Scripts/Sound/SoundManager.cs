@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 		public static AudioClip[] playerFootstepSounds1;
 		public static AudioClip[] playerScreams1;
 		public static AudioClip[] bugFootstepSounds1;
-
+		static bool inst = false;
 		public enum Soundtype
 		{
 				Player,
@@ -20,11 +20,15 @@ public class SoundManager : MonoBehaviour
 
 
 		void Awake ()
-		{
-				playerHitted1 = playerHitted;
-				playerScreams1 = playerScreams;
-				bugFootstepSounds1 = bugFootstepSounds;
-				playerFootstepSounds1 = playerFootstepSounds;
+		{		
+				if (!inst) {
+						inst = true;
+						playerHitted1 = playerHitted;
+						playerScreams1 = playerScreams;
+						bugFootstepSounds1 = bugFootstepSounds;
+						playerFootstepSounds1 = playerFootstepSounds;
+				}
+
 
 		}
 
@@ -50,9 +54,10 @@ public class SoundManager : MonoBehaviour
 
 		static     AudioClip GetRandomSoundFromArray (AudioClip[] audioClipArray)
 		{
-
-				if (audioClipArray.Length > 0)
+				if (audioClipArray.Length > 0) {
+		
 						return  audioClipArray [Random.Range (0, audioClipArray.Length)];
+				}
 				return null;
 		}
 

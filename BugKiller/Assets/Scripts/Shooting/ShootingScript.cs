@@ -44,7 +44,7 @@ public class ShootingScript : MonoBehaviour
     void Update()
     {
 		if(coolDownRemaining * 1.1 < coolDown) { 
-			audio.Stop();
+		audio.Stop();
 		}
         coolDownRemaining -= Time.deltaTime;
 		swapDirection();

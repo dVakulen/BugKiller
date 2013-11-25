@@ -49,18 +49,7 @@ public class CharacterMovingScript : MonoBehaviour
                     TurnLeft();
                 }
             }
-		/*
-			if(anim.GetBool("Run") )
-			{
-				if(walkAudioTimer>0.3)
-				{
-			sound = SoundManager.GetPlayerFootstepSound();
-				audiosource.pitch = Random.Range ((float)0.98, (float)1.02);
-				audiosource.PlayOneShot(sound, Random.Range((float)0.8, (float)1.2));
-					walkAudioTimer = 0;
-				}
-				walkAudioTimer += Time.deltaTime;
-			}*/
+	
 
             targetVelocity *= speed;
 
