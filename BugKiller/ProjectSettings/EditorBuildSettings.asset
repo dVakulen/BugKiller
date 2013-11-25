@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/StartPicture.unity
   - enabled: 1
     path: Assets/Scenes/MainScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
