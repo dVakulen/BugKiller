@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1357f93a0c25aa44180cf147fc6b1313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLevel: Coridor
+  StartLevel: GenderSelectScreen
 --- !u!1 &2038101741
 GameObject:
   m_ObjectHideFlags: 0

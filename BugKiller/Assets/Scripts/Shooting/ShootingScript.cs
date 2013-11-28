@@ -78,15 +78,17 @@ public class ShootingScript : MonoBehaviour
 		string input = Input.inputString;
 		if(input == "1" || input == "2")
 		{
-			uncheckWeapons();
-			switch(input)
-			{
-			case "1":
-				checkRevolver();				
-				break;
-			case "2":
-				checkUzi();
-				break;
+			if (WeaponManager.weaponsCount == 2){
+				uncheckWeapons();
+				switch(input)
+				{
+					case "1":
+						checkRevolver();				
+						break;
+					case "2":
+						checkUzi();
+						break;
+				}
 			}
 		}
 	}

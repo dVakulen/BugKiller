@@ -7,6 +7,7 @@ public class LevelCompleter : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player") 
 		{
+			WeaponManager.SetWeaponsCount(2);
 			Application.LoadLevel("Coridor");
 		}
 	}
