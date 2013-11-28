@@ -36,13 +36,13 @@ public class PlayerSound : MonoBehaviour
 
 						}
 						walkAudioTimer += Time.deltaTime;
-				} else if (!cms.grounded && ! jumped) {
+				} /*else if (!cms.grounded && ! jumped) {
 						jumped = true;
 						PlayPlayerJumpSound ();
 				}
 				if (cms.grounded)
 						jumped = false;
-
+*/
 				if (hp > target.Health) {
 						sound = SoundManager.GetPlayerHitted ();
 						audiosource.PlayOneShot (sound, 1);
