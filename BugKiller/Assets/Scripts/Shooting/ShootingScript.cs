@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
-{   public AudioSource audio;
+{   public AudioSource audiosource;
 	public AudioClip firesound;
     public float range = 100f;
 	public static float damage = 0f;
@@ -44,7 +44,7 @@ public class ShootingScript : MonoBehaviour
     void Update()
     {
 		if(coolDownRemaining * 1.1 < coolDown) { 
-		audio.Stop();
+			audiosource.Stop();
 		}
         coolDownRemaining -= Time.deltaTime;
 		swapDirection();
@@ -52,7 +52,7 @@ public class ShootingScript : MonoBehaviour
 
         if (Input.GetMouseButton(0) && coolDownRemaining <= 0 && !pause)
         {
-			audio.Play();
+			audiosource.Play();
             anim.SetBool("Shoot", true);
             MuzzleFlash.SetActive(true);
 			Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);

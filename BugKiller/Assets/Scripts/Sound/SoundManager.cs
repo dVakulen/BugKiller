@@ -6,10 +6,16 @@ public class SoundManager : MonoBehaviour
 		public  AudioClip[] playerScreams;
 		public AudioClip[] playerFootstepSounds  ;
 		public AudioClip[] playerHitted  ;
+		public AudioClip[] bugDeath  ;
+		public AudioClip[] bugTakeHit  ;
+		public AudioClip[] playerJump ;
 		public static AudioClip[] playerHitted1  ;
 		public static AudioClip[] playerFootstepSounds1;
 		public static AudioClip[] playerScreams1;
 		public static AudioClip[] bugFootstepSounds1;
+		public static AudioClip[] bugDeath1  ;
+		public static AudioClip[] bugTakeHit1  ;
+		public static AudioClip[] playerJump1 ;
 		static bool inst = false;
 		public enum Soundtype
 		{
@@ -27,6 +33,9 @@ public class SoundManager : MonoBehaviour
 						playerScreams1 = playerScreams;
 						bugFootstepSounds1 = bugFootstepSounds;
 						playerFootstepSounds1 = playerFootstepSounds;
+						bugDeath1 = bugDeath;
+						bugTakeHit1 = bugTakeHit;
+						playerJump1 = playerJump;
 				}
 
 
@@ -35,6 +44,21 @@ public class SoundManager : MonoBehaviour
 		public 	 static AudioClip GetPlayerFootstepSound ()
 		{
 				return GetRandomSoundFromArray (playerFootstepSounds1);
+		}
+
+		public 	 static AudioClip GetBugDeath ()
+		{
+				return GetRandomSoundFromArray (bugDeath1);
+		}
+
+		public 	 static AudioClip GetPlayerJump ()
+		{
+				return GetRandomSoundFromArray (playerJump1);
+		}
+
+		public 	 static AudioClip GetBugHitted ()
+		{
+				return GetRandomSoundFromArray (bugTakeHit1);
 		}
 
 		public 	 static AudioClip GetPlayerHitted ()

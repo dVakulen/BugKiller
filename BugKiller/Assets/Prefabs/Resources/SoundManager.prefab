@@ -56,8 +56,15 @@ MonoBehaviour:
   playerHitted:
   - {fileID: 8300000, guid: ce95993457ce0494a9cc340da4a3880c, type: 3}
   - {fileID: 8300000, guid: 8eb80fa98d85ce34fae7affcdfb64c6c, type: 3}
-  qwe: {fileID: 0}
-  asd: 
+  bugDeath:
+  - {fileID: 8300000, guid: b4448dc40ea96b744bd593de88053942, type: 3}
+  - {fileID: 8300000, guid: bfeb48770d5295c47b4ea8582a94ee6a, type: 3}
+  - {fileID: 8300000, guid: 76361ad3a7887fc4db7651d53a40f13b, type: 3}
+  bugTakeHit:
+  - {fileID: 8300000, guid: 0caa6ef27dc447f41a43a4f29f3a2fc3, type: 3}
+  playerJump:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

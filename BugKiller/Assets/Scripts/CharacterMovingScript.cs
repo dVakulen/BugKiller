@@ -13,15 +13,15 @@ public class CharacterMovingScript : MonoBehaviour
 	public AudioSource audiosource;
 	AudioClip sound;
 	private float walkAudioTimer   = 0.0f;
-	 bool grounded = false;
+	internal bool grounded = false;
     Animator anim;
-
+	PlayerSound playersound;
     void Awake()
     {
         rigidbody.freezeRotation = true;
         rigidbody.useGravity = false;
         anim = GetComponent<Animator>();
-    }
+	  }
 
     void FixedUpdate()
     {
@@ -65,6 +65,7 @@ public class CharacterMovingScript : MonoBehaviour
             // Jump
             if (canJump && Input.GetKeyDown(KeyCode.W))
             {
+		
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
             }
         }
@@ -79,7 +80,6 @@ public class CharacterMovingScript : MonoBehaviour
         // We apply gravity manually for more tuning control
         rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));
     }
-
     void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag != "Wall")
