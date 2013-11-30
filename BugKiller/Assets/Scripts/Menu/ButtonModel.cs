@@ -7,10 +7,14 @@ public class ButtonModel : MonoBehaviour {
 	// Use this for initialization
 	Color start;
 	public Color hover;
+	AudioSource audiosource;
+	public AudioClip   sound;
 
 	void Start () {
 		start = transform.GetComponent<TextMesh>().color;
 		hover = Color.red;
+		audiosource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
@@ -19,7 +23,8 @@ public class ButtonModel : MonoBehaviour {
 
 	void OnMouseEnter()
 	{
-		transform.GetComponent<TextMesh>().color = hover;
+		audiosource.PlayOneShot(sound,1);
+      	transform.GetComponent<TextMesh>().color = hover;
 	}
 
 	void OnMouseExit() 

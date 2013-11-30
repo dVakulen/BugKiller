@@ -13,7 +13,7 @@ public class PauseScript : MonoBehaviour {
 
 	void Start()
 	{
-		audiosource = GameObject.Find("Character").audio;
+		audiosource = gameObject.audio;
 		menu.SetActive(false);
 	}
 
@@ -43,11 +43,11 @@ public class PauseScript : MonoBehaviour {
 				OnPause(this);
 			if(paused)
 			{
-				audiosource.PlayOneShot(soundOpClose[0],UnityEngine.Random.Range((float)0.8, (float)1.2));
+				audiosource.PlayOneShot(soundOpClose[0],1f);
 			}
 			else
 			{
-				audiosource.PlayOneShot(soundOpClose[1], UnityEngine.Random.Range((float)0.8, (float)1.2));
+				audiosource.PlayOneShot(soundOpClose[1], 1);
 				
 			}
 		}
