@@ -19,7 +19,10 @@ public class PauseScript : MonoBehaviour {
 
 	void Update()
 	{
-		menu.transform.position = this.transform.position + new Vector3(0,0,8.3f);
+		float dx = (float)Math.Tan(this.transform.rotation.x)*8.3f;
+		float dy = (float)Math.Tan(this.transform.rotation.y)*8.3f;
+		menu.transform.position = this.transform.position + new Vector3(dy,-dx,8f);
+		menu.transform.rotation = this.transform.rotation;
 		menu.SetActive(paused);
 		if(paused)
 		{
