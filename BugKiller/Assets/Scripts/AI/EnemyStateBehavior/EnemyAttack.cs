@@ -10,7 +10,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Transform player;
 		AudioSource audio;
 		AudioClip sound;
-
+		PauseScript pausescript;
         //It should be in model class actually.
         Timer attackTimer;
         bool canAttack = true;
@@ -24,6 +24,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             attackTimer = new Timer(1000);
             attackTimer.Elapsed += canAttack_Elapsed;
             attackTimer.Start();
+			pausescript = GameObject.Find("Main Camera").GetComponent<PauseScript>();
 
             Debug.Log("Enemy is in EnemyAttack state now");
         }
@@ -37,7 +38,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         {
             anim.SetBool("Run", false);
 
-            if (canAttack)
+            if (canAttack &&!pausescript.pausedFIX)
             {
                 Debug.Log("Can attack now");
                 anim.SetBool("Attack", true);
@@ -50,7 +51,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             }
             else
             {
-                anim.SetBool("Attack", true);
+                anim.SetBool("Attack", false);
             }
         }
 

@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hover: {r: 0, g: 0, b: 0, a: 0}
+  sound: {fileID: 0}
 --- !u!65 &1790322193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -509,7 +510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee54f840e85410b4ab8286869d93c885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLevel: FirstIterationDemo
 --- !u!114 &1854824615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hover: {r: 0, g: 0, b: 0, a: 0}
+  sound: {fileID: 0}
 --- !u!65 &1854824616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -656,7 +657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1893891262}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 8.60000038, z: 9.01436351e-07}
+  m_LocalPosition: {x: 0, y: 8.30000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

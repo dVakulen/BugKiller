@@ -6,6 +6,7 @@ public class PauseScript : MonoBehaviour {
 
 	public GUISkin skin;
 	public static bool paused = false;
+	public  bool pausedFIX = false;
 	public GameObject menu;
 	public static event Action<object> OnPause;
 	 AudioSource audiosource;
@@ -19,10 +20,14 @@ public class PauseScript : MonoBehaviour {
 
 	void Update()
 	{
-		menu.transform.position = this.transform.position + new Vector3(0,0,8.3f);
+		float dx = (float)Math.Tan(this.transform.rotation.x)*8.3f;
+		float dy = (float)Math.Tan(this.transform.rotation.y)*8.3f;
+		menu.transform.position = this.transform.position + new Vector3(dy,-dx,8f);
+		menu.transform.rotation = this.transform.rotation;
 		menu.SetActive(paused);
 		if(paused)
 		{
+			pausedFIX = true;
 			Time.timeScale = 0;
 			Screen.showCursor = true;
 			Screen.lockCursor = false;
@@ -30,6 +35,7 @@ public class PauseScript : MonoBehaviour {
 		}
 		else
 		{
+			pausedFIX=false;
 			Time.timeScale = 1;
 			Screen.showCursor = false;
 			Screen.lockCursor = true;
