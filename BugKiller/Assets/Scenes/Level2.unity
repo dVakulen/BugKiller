@@ -120,7 +120,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: aba0c77d93d53204985691fb2b398d38, type: 2}
+  - {fileID: 2100000, guid: 304b9db0d5395eb4db0e5784727f00b5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -257,6 +257,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 22fad94a27a86f24ea11990413042d38, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 304b9db0d5395eb4db0e5784727f00b5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22fad94a27a86f24ea11990413042d38, type: 3}
   m_RootGameObject: {fileID: 1450652}
@@ -2768,6 +2772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin: {fileID: 0}
+  pausedFIX: 0
   menu: {fileID: 608184295}
   soundOpClose:
   - {fileID: 8300000, guid: e47032c6caf040e4183944ac3f21d4b5, type: 3}
