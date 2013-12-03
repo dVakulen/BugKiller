@@ -13,7 +13,7 @@ public class BossFightController : MonoBehaviour
 				boss.SetActive (false);
 
 		
-				if (WeaponManager.weaponsCount == 1) {
+				if (WeaponManager.weaponsCount == 2) {
 						player = GameObject.FindGameObjectWithTag ("Player").transform;
 						player.position = Point.position;
 						boss.SetActive (true);
