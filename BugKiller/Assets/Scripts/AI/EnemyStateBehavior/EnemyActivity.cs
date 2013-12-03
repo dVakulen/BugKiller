@@ -12,8 +12,11 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         Rigidbody rigidBody;
         float speed;
         float attentionDistance;
+	
+
 	   public EnemyActivity(EnemyController controller, EnemyState state)
         {
+
             enemyController = controller;
             this.thisEnemy = controller.transform;
             this.rigidBody = controller.rigidbody;
@@ -21,7 +24,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
             this.attentionDistance = controller.AttentionDistance;
 			currentState = state;
 			if(controller.IsBoss)
-				attentionDistance*=5;
+				attentionDistance*=50;
 	    }
 
         public EnemyController EnemyContoller

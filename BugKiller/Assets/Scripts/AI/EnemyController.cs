@@ -11,6 +11,9 @@ public class EnemyController : MonoBehaviour
     public float AttentionDistance = 5;
 	public bool IsBoss = false;
 	public GameObject fireball;
+	
+	internal Vector3 pos;
+	internal Quaternion rot;
 
     private Vector3 currentHeading;
     private int targetwaypoint;
@@ -20,11 +23,13 @@ public class EnemyController : MonoBehaviour
     private Enemy model;
     private Animator anim;
     private EnemyActivity enemyActivity;
-
+	private GameObject lvlexit;
     public EnemyController()
     {
         model = new Enemy();
+
         model.OnDying += model_OnDying;
+
     }
 
     public Enemy GetEnemyModel()
@@ -49,8 +54,17 @@ public class EnemyController : MonoBehaviour
         }
 
         enemyActivity = new EnemyActivity(this, new EnemyPatrol(this));
-
+		lvlexit = GameObject.Find("ExitFromLevel");
         anim = gameObject.GetComponent<Animator>();
+		if(IsBoss)
+		{
+			pos=  GameObject.Find("Fireball").transform.position;
+			rot = GameObject.Find("Fireball").transform.rotation;
+			GameObject.Find("Fireball").SetActive(false);
+			model.ReceiveHPBonus(500);
+				Debug.LogError(model.Health.ToString());
+
+		}
     }
 
     protected void Update()
@@ -67,7 +81,7 @@ public class EnemyController : MonoBehaviour
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<SphereCollider>().enabled = false;
         anim.SetBool("Death", true);
-
+		lvlexit.GetComponent<LevelCompleter>().KillEnemy();
         Destroy(this.gameObject, 4);
     }
 

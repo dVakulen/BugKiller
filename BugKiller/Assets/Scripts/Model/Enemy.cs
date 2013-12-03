@@ -9,5 +9,10 @@ public class Enemy : LivingEntity
     {
 
     }
+	public void ReceiveHPBonus(int hp)
+	{
+		health = health + hp;
+
+	}
 }
 

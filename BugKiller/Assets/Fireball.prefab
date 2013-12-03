@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.658869743, y: -.669775605, z: -.255047679, w: -.22856532}
   m_LocalPosition: {x: 3.24913883, y: 1.51469254, z: -.791647673}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -90,6 +90,7 @@ MonoBehaviour:
   speed: 3
   MaxDistance: 10000
   LifeTime: 100
+  IsFireball: 1
   Effect: {fileID: 100000, guid: 480a7201f3857b4498308439207d9fb5, type: 2}
 --- !u!135 &13500000
 SphereCollider:
@@ -99,9 +100,9 @@ SphereCollider:
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .300000012
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19800000
 ParticleSystem:
@@ -342,7 +343,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
   ShapeModule:
     serializedVersion: 2
     enabled: 0

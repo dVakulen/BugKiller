@@ -116,13 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4007f1233a9b74fa9be42583fafba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 10
+  size: 3
   color: {r: 1, g: .423000008, b: 0, a: 1}
   explodeOnStart: 1
   duration: 3
-  detail: 1
+  detail: 10
   upwardsBias: 0
-  destroyTime: 7
+  destroyTime: 3
   useWorldSpace: 1
   direction: {x: 0, y: 0, z: 0}
   fireballAMaterial: {fileID: 0}

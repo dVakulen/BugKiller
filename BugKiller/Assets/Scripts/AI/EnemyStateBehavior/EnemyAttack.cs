@@ -4,24 +4,16 @@ using UnityEngine;
 
 class Fireballs : MonoBehaviour
 {
-	
-	Quaternion AdditionalRotation;
-	Vector3 AdditionalVector;
-	float X = 1.1f;
-	float Y = 1.5f;
-	float Z = 0f;
-	public void ShootBall (GameObject Fireball, Transform enemy, Transform player)
+		float X = -1.1f;
+		float Y = 1.5f;
+		float Z = 0f;
+
+
+		public void ShootBall (GameObject Fireball, Vector3 pos, Quaternion rot)
 		{
-		AdditionalVector.Set (X, Y, Z);
-		AdditionalRotation.Set (1f, 0f, 1f, 1f);
-
-
-	//	Fireball.transform.rotation =Quaternion.Inverse(Fireball.transform.rotation); //Quaternion.FromToRotation(player.position,enemy.position);
-
-		AdditionalRotation.Set (0f, 0f, 1f, 1f);
-
-		Instantiate (Fireball, enemy.position + AdditionalVector,enemy.rotation * AdditionalRotation);
-		//Fireball.transform.rotation =Quaternion. //Quaternion.FromToRotation(player.position,enemy.position));
+	
+				
+				Instantiate (Fireball, pos, rot);
 		}
 }
 namespace Assets.Scripts.AI.EnemyStateBehavior
@@ -38,12 +30,11 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 				Timer attackTimer;
 				bool canAttack = true;
 				bool isboss;
-			
 				Fireballs fireballs;
 				GameObject fireball;
 				float coolDownRemaining = 0;
-				float coolDown = 1.4f;
-
+				float coolDown = 2.9f;
+		bool inst = false;
 				public EnemyAttack (EnemyActivity context)
 				{
 						target = Player.Instance;
@@ -55,8 +46,8 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 						pausescript = GameObject.Find ("Main Camera").GetComponent<PauseScript> ();
 						isboss = context.enemyController.IsBoss;
 						if (isboss) {
-				fireballs = new Fireballs();
-											fireball = context.enemyController.fireball;
+								fireballs = new Fireballs ();
+								fireball = context.enemyController.fireball;
 						}
 						Debug.Log ("Enemy is in EnemyAttack state now");
 				}
@@ -83,12 +74,17 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 								} else {
 										anim.SetBool ("Attack", false);
 								}
-						} else {
+						} else { 
 								coolDownRemaining -= Time.deltaTime;
 								if (coolDownRemaining <= 0 && !pausescript.pausedFIX) {
 										anim.SetBool ("Attack", true);
-										fireballs.ShootBall (fireball, context.ThisEnemy.transform,player);
-										coolDownRemaining = coolDown;
+					coolDownRemaining = coolDown;
+								
+
+						fireballs.ShootBall (fireball, context.enemyController.pos, context.enemyController.rot);
+
+
+
 								}
 
 						}
@@ -103,7 +99,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 								}
 						} else {
 								if (Vector3.Distance (player.position, context.ThisEnemy.position) >= 10) {
-										context.ChangeState (new EnemyHunting (context));
+									//	context.ChangeState (new EnemyHunting (context));
 								}
 						}
 				}

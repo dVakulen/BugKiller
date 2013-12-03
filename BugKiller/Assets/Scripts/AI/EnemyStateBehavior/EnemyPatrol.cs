@@ -29,6 +29,8 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 
         protected override void Work(EnemyActivity context)
         {
+			if(!context.enemyController.IsBoss)
+			{
             //updating direction
             UpdateDirection(context);
 
@@ -48,6 +50,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
                     currentGoal = firstPoint;
                 }
             }
+			}
         }
 
         protected override void CheckTransition(EnemyActivity context)
