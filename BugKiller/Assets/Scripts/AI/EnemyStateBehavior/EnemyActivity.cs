@@ -4,23 +4,25 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 {
     public class EnemyActivity
     {
+		
+		public  EnemyController enemyController;
+
         EnemyState currentState;
         Transform thisEnemy;
         Rigidbody rigidBody;
         float speed;
         float attentionDistance;
-        EnemyController enemyController;
-
-        public EnemyActivity(EnemyController controller, EnemyState state)
+	   public EnemyActivity(EnemyController controller, EnemyState state)
         {
             enemyController = controller;
             this.thisEnemy = controller.transform;
             this.rigidBody = controller.rigidbody;
             this.speed = controller.Speed;
             this.attentionDistance = controller.AttentionDistance;
-
-            currentState = state;
-        }
+			currentState = state;
+			if(controller.IsBoss)
+				attentionDistance*=5;
+	    }
 
         public EnemyController EnemyContoller
         {

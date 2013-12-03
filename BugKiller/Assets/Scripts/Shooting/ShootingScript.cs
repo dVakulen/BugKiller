@@ -43,7 +43,7 @@ public class ShootingScript : MonoBehaviour
 
     void Update()
     {
-		if(coolDownRemaining * 1.1 < coolDown) { 
+		if(coolDownRemaining * 1.1 < coolDown && !uzi.activeSelf) { 
 			audiosource.Stop();
 		}
         coolDownRemaining -= Time.deltaTime;
@@ -52,14 +52,21 @@ public class ShootingScript : MonoBehaviour
 
         if (Input.GetMouseButton(0) && coolDownRemaining <= 0 && !pause)
         {
+			if(!audiosource.isPlaying)
 			audiosource.Play();
             anim.SetBool("Shoot", true);
             MuzzleFlash.SetActive(true);
 			Instantiate(BulletObject, this.transform.position + AdditionalVector, this.transform.rotation * AdditionalRotation);
             coolDownRemaining = coolDown;
         }
-        else
+		else if(! Input.GetMouseButton(0) && coolDownRemaining <= 0 && !pause)
+		{
+			audiosource.Stop();
+
+		}
+		else
         {
+		
             MuzzleFlash.SetActive(false);
             anim.SetBool("Shoot", false);
         }

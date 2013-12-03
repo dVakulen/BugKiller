@@ -32,6 +32,13 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
                 Debug.Log("Here will be state's change into attack state.");
                 context.ChangeState(new EnemyAttack(context));
             }
+			else if ( context.enemyController.IsBoss)
+			{
+				if (Vector3.Distance(player.position, context.ThisEnemy.position) < 12)
+				{
+						context.ChangeState(new EnemyAttack(context));
+				}
+			}
             if (Vector3.Distance(player.position, context.ThisEnemy.position) > 15)
             {
                 //TODO: change state into EnemyPatrol

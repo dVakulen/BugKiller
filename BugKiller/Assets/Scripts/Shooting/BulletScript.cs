@@ -5,7 +5,7 @@ public class BulletScript : MonoBehaviour
     public float speed = 3f;
     public float MaxDistance = 10000;
     public float LifeTime = 100;
-
+	GameObject ef;
     float spawnTime;
 
     public GameObject Effect;
@@ -38,6 +38,9 @@ public class BulletScript : MonoBehaviour
 
     void Collisioning()
     {
-        Destroy(this.gameObject);
+	//	ef = 	(GameObject) Instantiate (Effect, this.transform.position, Quaternion.identity);
+
+		//Destroy(ef, 10f); 
+      //Destroy(this.gameObject);
     }
 }

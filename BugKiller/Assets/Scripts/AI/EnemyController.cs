@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     public float Damping = 0.1f;
     public float Speed = 2.0f;
     public float AttentionDistance = 5;
+	public bool IsBoss = false;
+	public GameObject fireball;
 
     private Vector3 currentHeading;
     private int targetwaypoint;
