@@ -29,7 +29,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
         protected override void CheckTransition(EnemyActivity context)
         {
             //TODO: change " < 3" into not hardcoded style (static class with parameters?)
-			if (Vector3.Distance(player.position, context.ThisEnemy.position) < 1.5 && !context.enemyController.IsBoss)
+			if (Vector3.Distance(player.position, context.ThisEnemy.position) < 1.75 && !context.enemyController.IsBoss)
             {
                 //TODO: change state in EnemyActivity
                 Debug.Log("Here will be state's change into attack state.");
