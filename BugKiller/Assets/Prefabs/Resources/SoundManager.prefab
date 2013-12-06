@@ -65,6 +65,9 @@ MonoBehaviour:
   playerJump:
   - {fileID: 8300000, guid: 50aa55a30a127cd4292eb896d3befcb8, type: 3}
   - {fileID: 8300000, guid: 2414a2c2d7c38d3408dbae4e5c32eaa2, type: 3}
+  girlJump:
+  - {fileID: 8300000, guid: e5556a16b09287c42b63effdc019602b, type: 3}
+  - {fileID: 8300000, guid: c25232883ec1a8f4a81ce75f04047f65, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
