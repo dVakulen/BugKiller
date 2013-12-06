@@ -3691,6 +3691,9 @@ MonoBehaviour:
   playerJump:
   - {fileID: 8300000, guid: 50aa55a30a127cd4292eb896d3befcb8, type: 3}
   - {fileID: 8300000, guid: 2414a2c2d7c38d3408dbae4e5c32eaa2, type: 3}
+  girlJump:
+  - {fileID: 8300000, guid: e5556a16b09287c42b63effdc019602b, type: 3}
+  - {fileID: 8300000, guid: c25232883ec1a8f4a81ce75f04047f65, type: 3}
 --- !u!4 &237702563
 Transform:
   m_ObjectHideFlags: 0
@@ -7090,7 +7093,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 304b9db0d5395eb4db0e5784727f00b5, type: 2}
+  - {fileID: 2100000, guid: 6d1a66755cf96f34c9481741e291e2a5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9913,7 +9916,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2b0c3a050144be24e878e3165c2059ff, type: 2}
+  - {fileID: 2100000, guid: 28671951b760ef04c8a0e876bf958bd6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10565,7 +10568,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!136 &781708455
 CapsuleCollider:
@@ -11631,7 +11634,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!136 &849550314
 CapsuleCollider:
@@ -18568,6 +18571,10 @@ Prefab:
       propertyPath: sound1
       value: 
       objectReference: {fileID: 8300000, guid: 2414a2c2d7c38d3408dbae4e5c32eaa2, type: 3}
+    - target: {fileID: 5400000, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
   m_RootGameObject: {fileID: 781708449}
