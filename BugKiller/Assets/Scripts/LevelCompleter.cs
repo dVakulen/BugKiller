@@ -8,7 +8,8 @@ public class LevelCompleter : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Player"&& EnemiesToKill<=0) 
 		{
-			WeaponManager.SetWeaponsCount(2);
+			WeaponManager.weaponsCount++;
+		
 			Application.LoadLevel("Coridor");
 		}
 	}

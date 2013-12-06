@@ -4618,6 +4618,10 @@ Prefab:
       propertyPath: m_Constraints
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 667621912}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4436f6490f52ffd4d965b09eef3faac6, type: 2}
   m_RootGameObject: {fileID: 667621909}
@@ -13751,7 +13755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d0e700b8879a64c82f651455279578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audiosource: {fileID: 0}
+  audiosource: {fileID: 667621912}
   firesound: {fileID: 8300000, guid: c7b8685e162577f41b72736b13f8be7a, type: 3}
   range: 100
   BulletObject: {fileID: 100002, guid: 5fd7de80fff20ee4fa23e6d52062d68c, type: 2}
