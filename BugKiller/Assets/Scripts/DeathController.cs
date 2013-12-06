@@ -10,7 +10,7 @@ public class DeathController : MonoBehaviour
 
     void Start()
     {
-		audiosource =GameObject.Find("Character").audio;
+		audiosource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         player.OnDying += player_OnDying;
     }
 
@@ -18,9 +18,19 @@ public class DeathController : MonoBehaviour
 	{
 		DeathLevelName = Application.loadedLevelName;
 		sound = SoundManager.GetPlayerScreams();
+		try
+		{
 		audiosource.PlayOneShot(sound, 1);
 		System.Threading.Thread.Sleep(1500);
 		Player.RestorePlayer();
         Application.LoadLevel("DeathScreen");
+		}
+		catch
+		{
+
+			Player.RestorePlayer();
+			Application.LoadLevel("DeathScreen");
+
+		}
     }
 }
