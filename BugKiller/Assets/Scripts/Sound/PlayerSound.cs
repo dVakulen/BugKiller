@@ -51,7 +51,10 @@ public class PlayerSound : MonoBehaviour
 
 	public void PlayPlayerJumpSound()
 	{
+		if(!Gender.GetGender())
 		sound = SoundManager.GetPlayerJump();
+		else
+			sound = SoundManager.GetGirlJump();
 		audiosource.PlayOneShot(sound, 2);
 	}
 }

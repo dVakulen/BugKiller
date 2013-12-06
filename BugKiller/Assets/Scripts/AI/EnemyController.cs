@@ -62,7 +62,6 @@ public class EnemyController : MonoBehaviour
 			rot = GameObject.Find("Fireball").transform.rotation;
 			GameObject.Find("Fireball").SetActive(false);
 			model.ReceiveHPBonus(500);
-				Debug.LogError(model.Health.ToString());
 
 		}
     }
