@@ -27,6 +27,10 @@ public class ShootingScript : MonoBehaviour
     void Start()
     {
 		uncheckWeapons();
+		if (WeaponManager.weaponsCount >= 2)
+		 checkUzi();
+		
+		else
 		checkRevolver();
 
 		AdditionalVector.Set(X, Y, Z);

@@ -42,8 +42,11 @@ public class EnemyController : MonoBehaviour
     /// </summary>
     public void OnDrawGizmos()
     {
+		if(!IsBoss)
+		{
         Gizmos.color = Color.red;
         Gizmos.DrawLine(FirstPoint.position, SecondPoint.position);
+		}
     }
 
     protected void Start()
