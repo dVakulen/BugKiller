@@ -11,7 +11,8 @@ public class ButtonModel : MonoBehaviour {
 	public AudioClip   sound;
 
 	void Start () {
-		start = transform.GetComponent<TextMesh>().color;
+		start = Color.black;
+		this.transform.GetComponent<TextMesh>().color = start;
 		hover = Color.red;
 		audiosource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
 
