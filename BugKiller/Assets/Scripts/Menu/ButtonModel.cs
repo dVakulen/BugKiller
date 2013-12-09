@@ -31,4 +31,9 @@ public class ButtonModel : MonoBehaviour {
 	{
 		transform.GetComponent<TextMesh>().color = start;
 	}
+
+	void OnDisable()
+	{
+		transform.GetComponent<TextMesh>().color = start;
+	}
 }
