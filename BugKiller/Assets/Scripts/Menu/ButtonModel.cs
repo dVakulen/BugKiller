@@ -23,7 +23,7 @@ public class ButtonModel : MonoBehaviour {
 
 	void OnMouseEnter()
 	{
-		audiosource.PlayOneShot(sound,1);
+	//	audiosource.PlayOneShot(sound,1);
       	transform.GetComponent<TextMesh>().color = hover;
 	}
 
