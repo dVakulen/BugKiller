@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class DeathController : MonoBehaviour
 {
@@ -17,7 +17,11 @@ public class DeathController : MonoBehaviour
     void player_OnDying(object obj)
 	{
 		DeathLevelName = Application.loadedLevelName;
-		sound = SoundManager.GetPlayerScreams();
+		if(!Gender.GetGender())
+			sound = SoundManager.GetPlayerScreams();
+		else
+			sound = SoundManager.GetPlayerFemaleScreams();
+
 		try
 		{
 		audiosource.PlayOneShot(sound, 1);

@@ -3,22 +3,24 @@
 public class SoundManager : MonoBehaviour
 {
 		public AudioClip[] bugFootstepSounds;
-		public  AudioClip[] playerScreams;
+		public AudioClip[] playerScreams;
+		public AudioClip[] playerFemaleScreams;
 		public AudioClip[] playerFootstepSounds  ;
-		public AudioClip[] playerHitted  ;
-		public AudioClip[] bugDeath  ;
-		public AudioClip[] bugTakeHit  ;
-		public AudioClip[] playerJump ;
-	public AudioClip[] girlJump ;
+		public AudioClip[] playerHitted;
+		public AudioClip[] bugDeath;
+		public AudioClip[] bugTakeHit;
+		public AudioClip[] playerJump;
+		public AudioClip[] girlJump ;
 
 		public static AudioClip[] playerHitted1  ;
 		public static AudioClip[] playerFootstepSounds1;
 		public static AudioClip[] playerScreams1;
+		public static AudioClip[] playerFemaleScreams1;
 		public static AudioClip[] bugFootstepSounds1;
 		public static AudioClip[] bugDeath1  ;
 		public static AudioClip[] bugTakeHit1  ;
 		public static AudioClip[] playerJump1 ;
-	public static AudioClip[] girlJump1 ;
+		public static AudioClip[] girlJump1 ;
 		static bool inst = false;
 		public enum Soundtype
 		{
@@ -30,17 +32,19 @@ public class SoundManager : MonoBehaviour
 
 		void Awake ()
 		{		
-				if (!inst) {
-						inst = true;
-						playerHitted1 = playerHitted;
-						playerScreams1 = playerScreams;
-						bugFootstepSounds1 = bugFootstepSounds;
-						playerFootstepSounds1 = playerFootstepSounds;
-						bugDeath1 = bugDeath;
-						bugTakeHit1 = bugTakeHit;
-						playerJump1 = playerJump;
-			girlJump1= girlJump;
-				}
+			if (!inst) 
+			{
+				inst = true;
+				playerHitted1 = playerHitted;
+				playerScreams1 = playerScreams;
+				playerFemaleScreams1 = playerFemaleScreams;
+				bugFootstepSounds1 = bugFootstepSounds;
+				playerFootstepSounds1 = playerFootstepSounds;
+				bugDeath1 = bugDeath;
+				bugTakeHit1 = bugTakeHit;
+				playerJump1 = playerJump;
+				girlJump1= girlJump;
+			}
 
 
 		}
@@ -81,6 +85,10 @@ public class SoundManager : MonoBehaviour
 		public 	 static AudioClip GetPlayerScreams ()
 		{
 				return GetRandomSoundFromArray (playerScreams1);
+		}
+		public 	 static AudioClip GetPlayerFemaleScreams ()
+		{
+			return GetRandomSoundFromArray (playerFemaleScreams1);
 		}
 
 		static     AudioClip GetRandomSoundFromArray (AudioClip[] audioClipArray)
