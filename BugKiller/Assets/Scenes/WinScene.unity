@@ -2093,6 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &590721497
@@ -2563,6 +2564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &688812310
@@ -3946,6 +3948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &1192997468
@@ -4544,6 +4547,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: start.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: start.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: start.a
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

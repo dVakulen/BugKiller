@@ -1053,7 +1053,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400126, guid: 831f2c8105756ae47ba6cb55c3f9a6d5, type: 3}
   m_PrefabInternal: {fileID: 1262158933}
   m_GameObject: {fileID: 61653631}
-  m_LocalRotation: {x: .961248815, y: -5.8262394e-08, z: .275682449, w: -4.98956148e-08}
+  m_LocalRotation: {x: .961248815, y: -7.36296002e-08, z: .275682449, w: 8.77217303e-08}
   m_LocalPosition: {x: -.129245535, y: 2.02125818e-08, z: 6.51925802e-09}
   m_LocalScale: {x: .999999762, y: 1, z: 1}
   m_Children: []
@@ -8321,7 +8321,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400124, guid: 831f2c8105756ae47ba6cb55c3f9a6d5, type: 3}
   m_PrefabInternal: {fileID: 1262158933}
   m_GameObject: {fileID: 594537426}
-  m_LocalRotation: {x: .961248815, y: -9.98905278e-08, z: .275682449, w: 9.52532631e-08}
+  m_LocalRotation: {x: .961248815, y: -8.45233359e-08, z: .275682449, w: -4.23640785e-08}
   m_LocalPosition: {x: -.129245535, y: 5.31142197e-09, z: -9.31323019e-10}
   m_LocalScale: {x: .999999762, y: 1, z: 1}
   m_Children: []
@@ -13975,7 +13975,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 4f0fc78b5c62d00468de84499f8fc634, type: 2}
+  - {fileID: 2100000, guid: 7feb484a1e2ebe04580278be4ff4867a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14205,6 +14205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &1048392895
@@ -14502,6 +14503,18 @@ Prefab:
     - target: {fileID: 10200002, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
       propertyPath: m_Text
       value: Restart level
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: start.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: start.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: start.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
@@ -15529,7 +15542,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400070, guid: 831f2c8105756ae47ba6cb55c3f9a6d5, type: 3}
   m_PrefabInternal: {fileID: 1262158933}
   m_GameObject: {fileID: 1132406839}
-  m_LocalRotation: {x: .954916954, y: 1.00675527e-06, z: -.296873033, w: 3.46309525e-06}
+  m_LocalRotation: {x: .954916954, y: 1.02639865e-06, z: -.296873033, w: -3.44800605e-06}
   m_LocalPosition: {x: -.454214722, y: 3.07897565e-08, z: 2.99513303e-09}
   m_LocalScale: {x: .999999642, y: 1, z: 1}
   m_Children:
@@ -17337,6 +17350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &1286183773
@@ -17500,7 +17514,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400072, guid: 831f2c8105756ae47ba6cb55c3f9a6d5, type: 3}
   m_PrefabInternal: {fileID: 1262158933}
   m_GameObject: {fileID: 1298532176}
-  m_LocalRotation: {x: .954916954, y: -1.16637091e-06, z: -.296873033, w: -3.51271819e-06}
+  m_LocalRotation: {x: .954916954, y: -1.15062437e-06, z: -.296873033, w: 3.5122182e-06}
   m_LocalPosition: {x: -.454214722, y: 3.86057835e-08, z: 4.85777907e-09}
   m_LocalScale: {x: .999999523, y: 1, z: 1}
   m_Children:
@@ -19110,7 +19124,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 4f0fc78b5c62d00468de84499f8fc634, type: 2}
+  - {fileID: 2100000, guid: 7feb484a1e2ebe04580278be4ff4867a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20266,6 +20280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &1595528847
@@ -26722,7 +26737,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 4f0fc78b5c62d00468de84499f8fc634, type: 2}
+  - {fileID: 2100000, guid: 8b8a04aaca0bcf4408151e492bd71016, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
