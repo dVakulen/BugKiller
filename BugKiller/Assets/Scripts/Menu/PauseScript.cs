@@ -49,11 +49,11 @@ public class PauseScript : MonoBehaviour {
 				OnPause(this);
 			if(paused)
 			{
-				audiosource.PlayOneShot(soundOpClose[0],1f);
+				//audiosource.PlayOneShot(soundOpClose[0],1f);
 			}
 			else
 			{
-				audiosource.PlayOneShot(soundOpClose[1], 1);
+				//audiosource.PlayOneShot(soundOpClose[1], 1);
 				
 			}
 		}
