@@ -5,13 +5,13 @@ using System;
 public class ButtonModel : MonoBehaviour {
 
 	// Use this for initialization
-	Color start;
+	public Color start;
 	public Color hover;
 	AudioSource audiosource;
 	public AudioClip   sound;
 
 	void Start () {
-		start = transform.GetComponent<TextMesh>().color;
+		this.transform.GetComponent<TextMesh>().color = start;
 		hover = Color.red;
 		audiosource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
 
