@@ -7401,6 +7401,10 @@ Prefab:
       propertyPath: WaypointRadius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 700a480e3b67c314ca5647dcc05bb5a2, type: 2}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 159371352}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 700a480e3b67c314ca5647dcc05bb5a2, type: 2}
   m_RootGameObject: {fileID: 159371350}
