@@ -79,6 +79,9 @@ public class EnemyController : MonoBehaviour
 
     void model_OnDying(object obj)
     {
+		if (IsBoss) {
+			Application.LoadLevel("WinScene");
+		}
         GetComponent<Rigidbody>().useGravity = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<SphereCollider>().enabled = false;

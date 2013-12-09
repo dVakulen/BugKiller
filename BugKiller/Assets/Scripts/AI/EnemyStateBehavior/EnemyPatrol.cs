@@ -56,7 +56,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 
         protected override void CheckTransition(EnemyActivity context)
         {
-            if (Math.Abs(player.position.y - context.ThisEnemy.position.y) < 1 && Vector3.Distance(context.ThisEnemy.position, player.position) < context.AttentionDistance)
+            if (Math.Abs(player.position.y - context.ThisEnemy.position.y) < 2 && Vector3.Distance(context.ThisEnemy.position, player.position) < context.AttentionDistance)
             {
                 context.ChangeState(new EnemyHunting(context));
             }
