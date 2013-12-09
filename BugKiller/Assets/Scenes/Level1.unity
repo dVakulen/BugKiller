@@ -14494,6 +14494,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 10200002, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
+      propertyPath: m_Text
+      value: Restart level
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dfec89f5d48f5e4287dc0aa71d3d5f8, type: 2}
   m_RootGameObject: {fileID: 2088560881}
@@ -17351,7 +17355,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1054605371}
   m_GameObject: {fileID: 1286183769}
-  m_Text: Restart game
+  m_Text: Restart level
   m_OffsetZ: 0
   m_CharacterSize: .600000024
   m_LineSpacing: 1
