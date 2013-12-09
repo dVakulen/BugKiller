@@ -43,6 +43,7 @@ public class ShootingScript : MonoBehaviour
 	void Paused(object o)
 	{
 		pause = !pause;
+		coolDownRemaining = coolDown;
 	}
 
     void Update()
