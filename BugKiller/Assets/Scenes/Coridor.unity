@@ -3302,6 +3302,10 @@ Prefab:
       propertyPath: LevelName
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81869beefcb970b4abdc95bbbbf1537b, type: 2}
+      propertyPath: m_Name
+      value: LevelLoader2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81869beefcb970b4abdc95bbbbf1537b, type: 2}
   m_RootGameObject: {fileID: 1901761309}
@@ -11440,6 +11444,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 81869beefcb970b4abdc95bbbbf1537b, type: 2}
+      propertyPath: m_Name
+      value: LevelLoader1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81869beefcb970b4abdc95bbbbf1537b, type: 2}
   m_RootGameObject: {fileID: 1576130446}
@@ -17195,7 +17203,7 @@ GameObject:
   - 23: {fileID: 1576130448}
   - 114: {fileID: 1576130447}
   m_Layer: 0
-  m_Name: LevelLoader
+  m_Name: LevelLoader1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20642,7 +20650,7 @@ GameObject:
   - 23: {fileID: 1901761311}
   - 114: {fileID: 1901761310}
   m_Layer: 0
-  m_Name: LevelLoader
+  m_Name: LevelLoader2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

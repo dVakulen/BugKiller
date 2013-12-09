@@ -14,6 +14,7 @@ public class LevelCompleter : MonoBehaviour
 			Application.LoadLevel("Coridor");
 		}
 	}*/
+	protected int count=0;
 	void OnTriggerStay(Collider other) 
 	{
 		if (other.gameObject.tag == "Player"&& EnemiesToKill<=0) 
@@ -21,7 +22,9 @@ public class LevelCompleter : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.E)) 
 			{
 				Player.Instance.ReceiveHPBonus(100);
-
+				if(count == 4)
+					WeaponManager.levelcompleted =1;
+			
 				WeaponManager.weaponsCount++;
 				Application.LoadLevel("Coridor");
 			}
@@ -29,6 +32,7 @@ public class LevelCompleter : MonoBehaviour
 	}
 	public	void KillEnemy()
 	{
+		count++;
 		EnemiesToKill--;
 	}
 }
