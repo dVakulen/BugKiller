@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.AI.EnemyStateBehavior
 {
@@ -29,33 +30,33 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 
         protected override void Work(EnemyActivity context)
         {
-			if(!context.enemyController.IsBoss)
-			{
-            //updating direction
-            UpdateDirection(context);
-
-            //perform action
-            context.Rigidbody.velocity = currentHeading.normalized * context.Speed;
-            context.ThisEnemy.LookAt(context.ThisEnemy.position + currentHeading);
-
-            //check if we have reached destination
-            if (Vector3.Distance(context.ThisEnemy.position, currentGoal.position) <= waypointRadius)
+            if (!context.enemyController.IsBoss)
             {
-                if (currentGoal == firstPoint)
+                //updating direction
+                UpdateDirection(context);
+
+                //perform action
+                context.Rigidbody.velocity = currentHeading.normalized * context.Speed;
+                context.ThisEnemy.LookAt(context.ThisEnemy.position + currentHeading);
+
+                //check if we have reached destination
+                if (Vector3.Distance(context.ThisEnemy.position, currentGoal.position) <= waypointRadius)
                 {
-                    currentGoal = secondPoint;
-                }
-                else
-                {
-                    currentGoal = firstPoint;
+                    if (currentGoal == firstPoint)
+                    {
+                        currentGoal = secondPoint;
+                    }
+                    else
+                    {
+                        currentGoal = firstPoint;
+                    }
                 }
             }
-			}
         }
 
         protected override void CheckTransition(EnemyActivity context)
         {
-            if (Vector3.Distance(context.ThisEnemy.position, player.position) < context.AttentionDistance)
+            if (Math.Abs(player.position.y - context.ThisEnemy.position.y) < 1 && Vector3.Distance(context.ThisEnemy.position, player.position) < context.AttentionDistance)
             {
                 context.ChangeState(new EnemyHunting(context));
             }
