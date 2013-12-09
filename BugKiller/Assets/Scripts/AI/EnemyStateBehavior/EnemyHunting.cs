@@ -44,7 +44,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
                     context.ChangeState(new EnemyAttack(context));
                 }
             }
-            if ((Vector3.Distance(player.position, context.ThisEnemy.position) > 15 || Math.Abs(player.position.y - context.ThisEnemy.position.y) > 1) && !context.enemyController.IsBoss)
+            if ((Vector3.Distance(player.position, context.ThisEnemy.position) > 15 || Math.Abs(player.position.y - context.ThisEnemy.position.y) > 2) && !context.enemyController.IsBoss)
             {
                 //TODO: change state into EnemyPatrol
                 context.ChangeState(new EnemyPatrol(context.EnemyContoller));
