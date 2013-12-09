@@ -8,9 +8,11 @@ public class EnemySounds : MonoBehaviour
 		private float walkAudioTimer   ;
 		Animator anim;
 		bool inst = false;
+		Transform player;
 
 		void Start ()
 		{
+				player = GameObject.Find ("Character").transform;
 				walkAudioTimer = 0;
 				anim = gameObject.GetComponent<Animator> ();
 		}
@@ -19,9 +21,10 @@ public class EnemySounds : MonoBehaviour
 		{
 				if (anim.GetBool ("Run")) {
 						if (walkAudioTimer > 0.2) {
-								sound = SoundManager.GetBugFootstepSounds ();
-								audiosource.PlayOneShot (sound, 1);
-								walkAudioTimer = 0;
+								if (Vector3.Distance (this.transform .position, player.position) < 7) {
+										audiosource.PlayOneShot (SoundManager.GetBugFootstepSounds (), 1f);
+					walkAudioTimer=0;
+								}
 						}
 						walkAudioTimer += Time.deltaTime;
 				} else if (anim.GetBool ("Death") && !inst) {
@@ -37,7 +40,7 @@ public class EnemySounds : MonoBehaviour
 		void OnTriggerEnter (Collider collision)
 		{
 				if (collision.gameObject.tag == "bullet") {
-		//	sound = SoundManager.GetBugHitted ();
+						//	sound = SoundManager.GetBugHitted ();
 //audiosource.PlayOneShot (sound, 1);
 				}
 		}

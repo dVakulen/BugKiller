@@ -7,7 +7,7 @@ namespace Assets.Scripts.AI.EnemyStateBehavior
 		
 		public  EnemyController enemyController;
 
-        EnemyState currentState;
+    internal    EnemyState currentState;
         Transform thisEnemy;
         Rigidbody rigidBody;
         float speed;

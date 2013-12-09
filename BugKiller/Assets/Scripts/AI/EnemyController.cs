@@ -83,6 +83,7 @@ public class EnemyController : MonoBehaviour
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<SphereCollider>().enabled = false;
         anim.SetBool("Death", true);
+		anim.SetBool("Run", false);
 		lvlexit.GetComponent<LevelCompleter>().KillEnemy();
         Destroy(this.gameObject, 4);
     }
