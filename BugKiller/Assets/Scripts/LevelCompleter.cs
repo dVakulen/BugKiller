@@ -4,6 +4,7 @@ using System.Collections;
 public class LevelCompleter : MonoBehaviour 
 {
 	public int EnemiesToKill=4;
+	public int lvl = 1;
 	/*
 	void OnTriggerEnter(Collider other) 
 	{
@@ -21,11 +22,11 @@ public class LevelCompleter : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.E)) 
 			{
+				WeaponManager.weaponsCount++;
 				Player.Instance.ReceiveHPBonus(100);
 				if(count == 4)
-					WeaponManager.levelcompleted =1;
+					WeaponManager.levelcompleted =lvl;
 			
-				WeaponManager.weaponsCount++;
 				Application.LoadLevel("Coridor");
 			}
 		}

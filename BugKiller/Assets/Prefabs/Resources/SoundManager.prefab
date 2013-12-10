@@ -48,6 +48,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 47643987a93a28248a85dba06bf214af, type: 3}
   - {fileID: 8300000, guid: b4d854eb2e96ae741a959b76c816bc30, type: 3}
   - {fileID: 8300000, guid: 193a2d3478d3e9441944560ffa6b8820, type: 3}
+  playerFemaleScreams:
+  - {fileID: 8300000, guid: 3db2aa0496d70a34c8c21589aa53c46f, type: 3}
   playerFootstepSounds:
   - {fileID: 8300000, guid: a8e3f65af4f68604bb973fab0e47891e, type: 3}
   - {fileID: 8300000, guid: 152a7885716c9204ca3b47d937c60874, type: 3}
@@ -66,8 +68,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 50aa55a30a127cd4292eb896d3befcb8, type: 3}
   - {fileID: 8300000, guid: 2414a2c2d7c38d3408dbae4e5c32eaa2, type: 3}
   girlJump:
-  - {fileID: 8300000, guid: e5556a16b09287c42b63effdc019602b, type: 3}
-  - {fileID: 8300000, guid: c25232883ec1a8f4a81ce75f04047f65, type: 3}
+  - {fileID: 8300000, guid: 8da2e6adcc42eeb478e870439623f0e1, type: 3}
+  - {fileID: 8300000, guid: 8da2e6adcc42eeb478e870439623f0e1, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
