@@ -12,7 +12,7 @@ public class Fireworks  : MonoBehaviour
 
 		void Start ()
 		{
-		time = t;
+				time = t;
 				time -= delay;
 		}
 
@@ -20,8 +20,8 @@ public class Fireworks  : MonoBehaviour
 		{
 				time += Time.deltaTime;
 				if (time > t) {
-			time =0;
-			Boom();
+						time = 0;
+						Boom ();
 				}
 		}
 
