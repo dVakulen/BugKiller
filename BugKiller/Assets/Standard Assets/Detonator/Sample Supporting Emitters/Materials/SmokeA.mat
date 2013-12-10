@@ -39,12 +39,12 @@ Material:
         second: {r: 1, g: .981065094, b: .961538434, a: 1}
       data:
         first:
-          name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 1}
-      data:
-        first:
           name: _TintColor
         second: {r: .469230771, g: .469230771, b: .469230771, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .5, g: .5, b: .5, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

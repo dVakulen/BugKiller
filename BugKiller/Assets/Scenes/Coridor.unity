@@ -6581,7 +6581,7 @@ MonoBehaviour:
   MaxDistance: 10000
   LifeTime: 100
   IsFireball: 1
-  FireballDamage: 7
+  FireballDamage: 20
   Effect: {fileID: 100000, guid: 480a7201f3857b4498308439207d9fb5, type: 2}
 --- !u!54 &738092758
 Rigidbody:
