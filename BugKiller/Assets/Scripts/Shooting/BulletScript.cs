@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour
 		public float MaxDistance = 10000;
 		public float LifeTime = 100;
 		public bool IsFireball = false;
-		public float FireballDamage = 7;
+		public float FireballDamage = 20;
 		Player target;
 		GameObject ef;
 		float spawnTime;
