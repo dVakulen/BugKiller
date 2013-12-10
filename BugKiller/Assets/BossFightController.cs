@@ -16,7 +16,7 @@ public class BossFightController : MonoBehaviour
 				if (WeaponManager.levelcompleted == 1) {
 						GameObject cam = GameObject.FindGameObjectWithTag ("MainCamera");
 						player.position = GameObject.Find ("LevelLoader1").transform.position;
-						cam.transform.position = cam.transform.position + new Vector3 (5f, 0, 0);
+			cam.transform.position = cam.transform.position + new Vector3 (	player.position.x, 0, 0);
 				}
 
 
@@ -29,7 +29,7 @@ public class BossFightController : MonoBehaviour
 						player.position = Point.position;
 						boss.SetActive (true);
 						GameObject cam = GameObject.FindGameObjectWithTag ("MainCamera");
-						cam.transform.position = cam.transform.position + new Vector3 (0, 2.4f, 0); 
+			cam.transform.position =  new Vector3 (player.position.x,cam.transform.position.y + 2.8f,cam.transform.position.z); 
 				}
 		}
 	
