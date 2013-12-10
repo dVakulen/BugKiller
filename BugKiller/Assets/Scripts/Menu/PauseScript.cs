@@ -21,13 +21,10 @@ public class PauseScript : MonoBehaviour {
 
 	void Update()
 	{
-		if(!IsWinScene)
-		{
 		float dx = (float)Math.Tan(this.transform.rotation.x)*4.15f;
 		float dy = (float)Math.Tan(this.transform.rotation.y)*4.15f;
 		menu.transform.position = this.transform.position + new Vector3(dy,-dx,4.15f);
 		menu.transform.rotation = this.transform.rotation;
-		}
 		menu.SetActive(paused);
 		if(paused)
 		{
