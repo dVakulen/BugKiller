@@ -24,19 +24,22 @@ public class PlayerSound : MonoBehaviour
 	}
 	
 	void Update ()
-	{
+	{try{
 		if (anim.GetBool ("Run")) 
 		{
 			jumped = false;
 			if (walkAudioTimer > 0.3) 
 			{
+
 				sound = SoundManager.GetPlayerFootstepSound();
 				audiosource.pitch = (1);
 				audiosource.PlayOneShot(sound, 1);
 				walkAudioTimer = 0;
+				}
+			
 			}
 			walkAudioTimer += Time.deltaTime;
-		}
+		
 		if (hp > target.Health) 
 		{
 			sound = SoundManager.GetPlayerHitted();
@@ -47,6 +50,8 @@ public class PlayerSound : MonoBehaviour
 		{
 			hp = target.Health;
 		}
+		}
+		catch{}
 	}
 
 	public void PlayPlayerJumpSound()

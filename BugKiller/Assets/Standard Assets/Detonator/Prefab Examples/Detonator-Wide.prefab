@@ -224,7 +224,7 @@ MonoBehaviour:
   autoCreateFireball: 1
   autoCreateSparks: 1
   autoCreateShockwave: 1
-  autoCreateSmoke: 1
+  autoCreateSmoke: 0
   autoCreateGlow: 1
   autoCreateLight: 1
   autoCreateForce: 1
