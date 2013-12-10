@@ -83,12 +83,19 @@ public abstract class DetonatorComponent : MonoBehaviour
 	public  Vector3 velocity = Vector3.zero;
 	
     public abstract void Explode();
-
+	
+	//The main Detonator calls this instead of using Awake() or Start() on subcomponents
+	//which ensures it happens when we want.
 	public abstract void Init();
 	
 	public  float detailThreshold;
 
-
+	/*
+		This exists because Detonator makes relative changes
+		to set values once the game is running, so we need to store their beginning
+		values somewhere to calculate against. An improved design could probably
+		avoid this.
+	*/
 	public void SetStartValues()
 	{
 		startSize = size;
@@ -331,13 +338,17 @@ public class Detonator : MonoBehaviour {
 	
 	public void Reset() 
 	{
-		size = 10f; 
+		size = 10f; //this is hardcoded because _baseSize up top is not really the default as much as what we match to
 		color = _baseColor;
 		duration = _baseDuration;
 		FillDefaultMaterials();
 	}
 	
 
+	//Default Materials
+	//The statics are so that even if there are multiple Detonators in the world, they
+	//don't each create their own default materials. Theoretically this will reduce draw calls, but I haven't really
+	//tested that.
 	public static Material defaultFireballAMaterial;
 	public static Material defaultFireballBMaterial;
 	public static Material defaultSmokeAMaterial;

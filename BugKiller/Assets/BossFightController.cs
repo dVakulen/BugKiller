@@ -22,7 +22,7 @@ public class BossFightController : MonoBehaviour
 
 
 
-		if (WeaponManager.weaponsCount >= 3 ) { // &&
+		if (WeaponManager.weaponsCount >= 3) { // &&
 			
 						Debug.LogError (WeaponManager.weaponsCount.ToString ());
 						
