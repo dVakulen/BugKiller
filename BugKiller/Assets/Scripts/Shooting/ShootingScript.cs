@@ -69,7 +69,6 @@ public class ShootingScript : MonoBehaviour
         else if (!Input.GetMouseButton(0) && coolDownRemaining <= 0 && !pause)
         {
             audiosource.Stop();
-
         }
         else
         {
