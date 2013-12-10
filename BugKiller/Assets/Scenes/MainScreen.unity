@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 0, g: 0, b: 0, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 8300000, guid: 834632593dbcae541999e451a30135bf, type: 3}
 --- !u!65 &1762297110
@@ -546,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 1, g: 1, b: 1, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 8300000, guid: a9972e37b23296048af02f855d3da0ea, type: 3}
 --- !u!65 &1905607768

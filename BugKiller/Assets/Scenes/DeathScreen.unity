@@ -394,7 +394,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790322189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 293a2c1047ae15644bbc627b6d8bfb34, type: 3}
+  m_Script: {fileID: 11500000, guid: b371eae9676d40b4e8b67b1dff86d619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1790322192
@@ -409,6 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 1, g: 1, b: 1, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &1790322193
@@ -522,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26565d7ff2472499d36e9fc07fbb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {r: 1, g: 1, b: 1, a: 1}
   hover: {r: 0, g: 0, b: 0, a: 0}
   sound: {fileID: 0}
 --- !u!65 &1854824616
@@ -545,7 +547,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 629417752}
   m_GameObject: {fileID: 1854824612}
-  m_Text: Restart game
+  m_Text: Restart level
   m_OffsetZ: 0
   m_CharacterSize: .600000024
   m_LineSpacing: 1
