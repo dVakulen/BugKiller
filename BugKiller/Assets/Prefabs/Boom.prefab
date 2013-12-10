@@ -136,8 +136,8 @@ MonoBehaviour:
   autoCreateFireball: 1
   autoCreateSparks: 0
   autoCreateShockwave: 1
-  autoCreateSmoke: 1
-  autoCreateGlow: 1
+  autoCreateSmoke: 0
+  autoCreateGlow: 0
   autoCreateLight: 1
   autoCreateForce: 1
   autoCreateHeatwave: 0
