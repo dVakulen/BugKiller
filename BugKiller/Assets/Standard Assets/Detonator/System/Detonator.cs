@@ -83,19 +83,12 @@ public abstract class DetonatorComponent : MonoBehaviour
 	public  Vector3 velocity = Vector3.zero;
 	
     public abstract void Explode();
-	
-	//The main Detonator calls this instead of using Awake() or Start() on subcomponents
-	//which ensures it happens when we want.
+
 	public abstract void Init();
 	
 	public  float detailThreshold;
 
-	/*
-		This exists because Detonator makes relative changes
-		to set values once the game is running, so we need to store their beginning
-		values somewhere to calculate against. An improved design could probably
-		avoid this.
-	*/
+
 	public void SetStartValues()
 	{
 		startSize = size;
