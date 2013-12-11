@@ -49,16 +49,16 @@ ParticleAnimator:
     rgba: 2323711
   colorAnimation[1]:
     serializedVersion: 2
-    rgba: 2789425987
+    rgba: 2788636632
   colorAnimation[2]:
     serializedVersion: 2
-    rgba: 2051228483
+    rgba: 2046820530
   colorAnimation[3]:
     serializedVersion: 2
-    rgba: 1413167931
+    rgba: 1410931184
   colorAnimation[4]:
     serializedVersion: 2
-    rgba: 2960685
+    rgba: 255
   worldRotationAxis: {x: 0, y: 0, z: 0}
   localRotationAxis: {x: 0, y: 0, z: 0}
   sizeGrow: .889508128

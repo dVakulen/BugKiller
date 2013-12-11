@@ -331,17 +331,13 @@ public class Detonator : MonoBehaviour {
 	
 	public void Reset() 
 	{
-		size = 10f; //this is hardcoded because _baseSize up top is not really the default as much as what we match to
+		size = 10f; 
 		color = _baseColor;
 		duration = _baseDuration;
 		FillDefaultMaterials();
 	}
 	
 
-	//Default Materials
-	//The statics are so that even if there are multiple Detonators in the world, they
-	//don't each create their own default materials. Theoretically this will reduce draw calls, but I haven't really
-	//tested that.
 	public static Material defaultFireballAMaterial;
 	public static Material defaultFireballBMaterial;
 	public static Material defaultSmokeAMaterial;

@@ -44,19 +44,19 @@ ParticleAnimator:
   Does Animate Color?: 1
   colorAnimation[0]:
     serializedVersion: 2
-    rgba: 986895
+    rgba: 9174784
   colorAnimation[1]:
     serializedVersion: 2
-    rgba: 546345108
+    rgba: 539098880
   colorAnimation[2]:
     serializedVersion: 2
-    rgba: 729907597
+    rgba: 728497920
   colorAnimation[3]:
     serializedVersion: 2
-    rgba: 829978744
+    rgba: 825032448
   colorAnimation[4]:
     serializedVersion: 2
-    rgba: 12500670
+    rgba: 2948864
   worldRotationAxis: {x: 0, y: 0, z: 0}
   localRotationAxis: {x: 0, y: 0, z: 0}
   sizeGrow: .100000001
@@ -116,6 +116,9 @@ ParticleRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   serializedVersion: 2
   m_CameraVelocityScale: 0
   m_StretchParticles: 0

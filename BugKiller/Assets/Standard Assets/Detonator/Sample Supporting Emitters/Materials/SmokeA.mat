@@ -17,7 +17,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 2a6221eb1b1c50a4cb69a62e2f264e58, type: 3}
+          m_Texture: {fileID: 2800000, guid: 8e3ff3e27ca4bc54dda56e89e0550dfa, type: 3}
           m_Scale: {x: .5, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -32,6 +32,10 @@ Material:
         first:
           name: _Shininess
         second: .078125
+      data:
+        first:
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:
@@ -39,12 +43,12 @@ Material:
         second: {r: 1, g: .981065094, b: .961538434, a: 1}
       data:
         first:
-          name: _TintColor
-        second: {r: .469230771, g: .469230771, b: .469230771, a: 1}
-      data:
-        first:
           name: _SpecColor
         second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .469230771, g: .469230771, b: .469230771, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

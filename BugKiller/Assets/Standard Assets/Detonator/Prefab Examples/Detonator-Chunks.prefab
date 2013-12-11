@@ -63,13 +63,13 @@ MonoBehaviour:
   glowMaterial: {fileID: 0}
   heatwaveMaterial: {fileID: 0}
   autoCreateFireball: 1
-  autoCreateSparks: 1
-  autoCreateShockwave: 0
+  autoCreateSparks: 0
+  autoCreateShockwave: 1
   autoCreateSmoke: 0
-  autoCreateGlow: 1
+  autoCreateGlow: 0
   autoCreateLight: 1
   autoCreateForce: 1
-  autoCreateHeatwave: 1
+  autoCreateHeatwave: 0
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6

@@ -70,7 +70,7 @@ MonoBehaviour:
   glowMaterial: {fileID: 0}
   heatwaveMaterial: {fileID: 0}
   autoCreateFireball: 1
-  autoCreateSparks: 1
+  autoCreateSparks: 0
   autoCreateShockwave: 0
   autoCreateSmoke: 0
   autoCreateGlow: 1
