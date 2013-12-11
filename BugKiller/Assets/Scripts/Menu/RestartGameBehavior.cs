@@ -19,6 +19,7 @@ public class RestartGameBehavior : MonoBehaviour {
 	void OnMouseDown()
 	{
 		Player.RestorePlayer();
+		WeaponManager.levelcompleted =1;
 		Application.LoadLevel(StartLevel);
 	}
 }
