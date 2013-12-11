@@ -22,11 +22,10 @@ public class BossFightController : MonoBehaviour
 
 
 
-		if (WeaponManager.levelcompleted ==2) { //WeaponManager.weaponsCount >= 3  && 
+		if (WeaponManager.levelcompleted ==2) { 
 			
-						Debug.LogError (WeaponManager.weaponsCount.ToString ());
-						
-						player.position = Point.position;
+						Debug.LogError (WeaponManager.weaponsCount.ToString () + "  ");
+							player.position = Point.position;
 						boss.SetActive (true);
 						GameObject cam = GameObject.FindGameObjectWithTag ("MainCamera");
 			cam.transform.position =  new Vector3 (player.position.x,cam.transform.position.y + 2.8f,cam.transform.position.z); 
