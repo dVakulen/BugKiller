@@ -254,6 +254,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e607997c7f58afe4895a2507e6f8f3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &288715729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 288715731}
+  - 114: {fileID: 288715730}
+  m_Layer: 0
+  m_Name: GameLogicReseter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &288715730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288715729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8e149c97ab5664c95cf7e49917fac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &288715731
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288715729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3757503, y: -27.3890648, z: 31.7750816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1001 &799026172
 Prefab:
   m_ObjectHideFlags: 0

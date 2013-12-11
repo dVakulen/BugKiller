@@ -18,7 +18,7 @@ public class EnemySounds : MonoBehaviour
 		}
 	
 		void Update ()
-		{
+		{/*
 				if (anim.GetBool ("Run")) {
 						if (walkAudioTimer > 0.2) {
 								if (Vector3.Distance (this.transform .position, player.position) < 7) {
@@ -27,7 +27,10 @@ public class EnemySounds : MonoBehaviour
 								}
 						}
 						walkAudioTimer += Time.deltaTime;
-				} else if (anim.GetBool ("Death") && !inst) {
+				} else 
+		*/
+		
+		if (anim.GetBool ("Death") && !inst) {
 						audiosource.Stop ();
 						sound = SoundManager.GetBugDeath ();
 						audiosource.PlayOneShot (sound, 1);

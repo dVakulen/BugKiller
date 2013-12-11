@@ -6,13 +6,6 @@ public class LevelGUI : MonoBehaviour
 
     void OnGUI()
     {
-        if (player.IsAlive)
-        {
-            GUI.Label(new Rect(10, 10, 400, 120), "HP: " + player.Health);
-        }
-        else
-        {
-            GUI.Label(new Rect(10, 10, 400, 120), "game over");
-        }
+        GUI.Label(new Rect(10, 10, 400, 120), "HP: " + player.Health);
     }
 }
