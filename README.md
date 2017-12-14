@@ -1,3 +1,2 @@
 # BugKiller
-Unity3d game  with few design patterns; 
-Developed  using Scrum methodology
+Game with state machines based AI. Built using Unity3D
